@@ -54,7 +54,7 @@
               <ul id="navLink" class="navbar-nav">
                 <li class="nav-item">
                   <a
-                    class="nav-link matter home active"
+                    class="nav-link nav-l home active"
                     aria-current="page"
                     href="#home"
                     ><p class="sign">00.</p>
@@ -62,19 +62,19 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link aboutme matter" href="#aboutme">
+                  <a class="nav-link aboutme nav-l" href="#aboutme">
                     <p class="sign">01.</p>
                     About Me</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link project matter" href="#project">
+                  <a class="nav-link project nav-l" href="#project">
                     <p class="sign">02.</p>
                     Project</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link contact matter" href="#contact"
+                  <a class="nav-link contact nav-l" href="#contact"
                     ><p class="sign">03.</p>
                     Contact
                   </a>
@@ -87,11 +87,47 @@
     </header>
     <section
       id="home"
-      class="bg-section bg-parallax text-center full-vh b"
-    ></section>
+      class="bg-section bg-parallax text-center bg-overlay bg-overlay-dark full-vh"
+      style="z-index: 0"
+    >
+      <div class="container-fluid">
+        <div class="container">
+          <div
+            class="row justify-content-start align-items-start pt-5 full-vh fixed-top row-mb"
+          >
+            <div class="col-md-auto col-auto col-lg-auto mb-5">
+              <h1 class="hero">
+                Lorem ipsum dolor sit amet, <br />consectetur adipiscing elit
+              </h1>
+            </div>
+          </div>
+          <div
+            class="row justify-content-end align-items-center mt-5 pt-5 full-vh fixed-top row-mb"
+          >
+            <div class="col-md-auto col-auto col-lg-auto mt-5">
+              <h3 class="bio">
+                Lorem ipsum dolor sit amet, <br />consectetur adipiscing elit
+              </h3>
+            </div>
+          </div>
+          <div
+            class="row justify-content-center align-items-end pt-5 full-vh fixed-top row-"
+          >
+            <div class="col-md-auto col-auto col-lg-auto mt-5">
+              <a class="btn-contact" href="#contact"
+                ><button type="button" class="btn btn-primary exp">
+                  CONTACT US!
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section
       id="aboutme"
-      class="aboutme fade-in-section is-visible full-vh navy"
+      class="aboutme fade-in-section is-visible full-vh text-center navy"
+      style="z-index: 1"
     ></section>
     <section id="project" class="project full-vh d"></section>
 

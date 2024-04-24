@@ -7,6 +7,23 @@ html {
 section {
   scroll-behavior: smooth;
 }
+section {
+  position: relative;
+}
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --teal: #9fd3c7;
+  --red: rgb(197, 14, 14);
+  --redA: rgb(255, 0, 0);
+  --blue: #3264a1;
+  --ocean: #0956fc;
+  --bg: rgb(0, 0, 0);
+}
+.fa-solid {
+  color: var(--redA) !important;
+  font-size: 28px;
+}
 .navbar-nav {
   margin-left: auto;
   padding-right: 120px;
@@ -31,17 +48,20 @@ section {
   font-family: monaco, monospace !important;
 }*/
 .nav-link:hover {
-  color: #06c8de !important;
+  color: var(--redA) !important;
+}
+.nav-link:hover .sign {
+  color: var(--white) !important;
 }
 .nav-link p {
   display: inline !important;
 }
 .sign {
-  color: #06c8de !important;
+  color: var(--redA) !important;
   font-family: monaco, monospace !important;
 }
-.matter.active {
-  color: #06c8de !important;
+.nav-l.active {
+  color: var(--redA) !important;
 }
 
 .nav-item.servizi {
@@ -62,7 +82,124 @@ section {
 .b {
   background-color: black;
 }
-.matter {
+.nav-l {
   font-family: monaco, monospace !important;
-  color: #03717d !important;
+  color: var(--white) !important;
+}
+
+@media (min-width: 1200px) {
+  .bg-parallax {
+    background-image: url(../images/bg.jpg);
+    background-color: black;
+    background-attachment: fixed !important;
+  }
+}
+
+.bg-parallax {
+  background-color: black !important;
+  background-attachment: fixed !important;
+}
+.bg-section {
+  width: 100%;
+  background-size: cover;
+  background-position: center, center;
+  z-index: 1;
+  overflow: hidden;
+}
+.bg-overlay::before {
+  content: "";
+  overflow: hidden;
+  display: inline-block;
+  min-height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+}
+.bg-overlay-dark::before {
+  background-color: rgba(0, 0, 0, 0.767);
+  overflow: hidden;
+  background-attachment: fixed !important;
+}
+
+#blurredDiv {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://via.placeholder.com/1920x1080");
+  background-size: cover;
+  filter: blur(0); /* Inizialmente nessuna sfocatura */
+  transition: filter 0.3s ease-out; /* Transizione per l'effetto blur */
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    color: var(--redA);
+    padding-top: 160px;
+    font-size: 60px;
+    padding-left: 70px;
+    text-transform: uppercase;
+  }
+  .bio {
+    color: var(--white);
+
+    font-size: 40px;
+    padding-right: 70px;
+    text-transform: uppercase;
+  }
+  .exp {
+    background-color: var(--black) !important;
+    border-color: var(--black) !important;
+    color: var(--white) !important;
+    margin-bottom: 200px;
+    font-size: 20px !important;
+  }
+  .exp:hover {
+    background-color: var(--black) !important;
+    border-color: var(--redA) !important;
+    color: var(--redA) !important;
+  }
+  .btn {
+    border-radius: 0.975rem !important;
+  }
+  .btn-contact {
+    padding-bottom: 120px;
+  }
+}
+
+@media (max-width: 500px) {
+  .row.row-mb {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .hero {
+    color: var(--redA);
+    font-size: 30px;
+    padding-bottom: 4.5rem !important;
+    text-transform: uppercase;
+  }
+  .bio {
+    color: var(--white);
+
+    font-size: 20px;
+
+    text-transform: uppercase;
+  }
+  .exp {
+    background-color: var(--black) !important;
+    border-color: var(--black) !important;
+    color: var(--white) !important;
+    margin-bottom: 6rem !important;
+    font-size: 15px !important;
+  }
+  .exp:hover {
+    background-color: var(--black) !important;
+    border-color: var(--redA) !important;
+    color: var(--redA) !important;
+  }
+  .btn {
+    border-radius: 0.975rem !important;
+  }
 }

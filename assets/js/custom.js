@@ -34,3 +34,10 @@ window.onscroll = () => {
     }
   });
 };
+$(window).scroll(function (e) {
+  var distanceScrolled = $(this).scrollTop();
+
+  $(".hero").css("-webkit-filter", "blur(" + distanceScrolled / 60 + "px)");
+  $(".bio").css("-webkit-filter", "blur(" + distanceScrolled / 40 + "px)");
+  $(".exp").css("-webkit-filter", "blur(" + distanceScrolled / 25 + "px)");
+});
