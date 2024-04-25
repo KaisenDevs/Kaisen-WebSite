@@ -22,7 +22,7 @@ window.onscroll = () => {
 
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
-    if (scrollY >= sectionTop - 170) {
+    if (scrollY >= sectionTop - 80) {
       current = section.getAttribute("id");
     }
   });
@@ -32,6 +32,15 @@ window.onscroll = () => {
     if (a.classList.contains(current)) {
       a.classList.add("active");
     }
+    if (current == "aboutme" || current == "project" || current == "contact") {
+      var nav = document.getElementById("navbar");
+      nav.classList.add("nav-black");
+    }
+    if (current == "home") {
+      var nav = document.getElementById("navbar");
+      nav.classList.remove("nav-black");
+    }
+    console.log(current);
   });
 };
 $(window).scroll(function (e) {

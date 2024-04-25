@@ -7,11 +7,12 @@ html {
 section {
   scroll-behavior: smooth;
 }
-section {
+.rel {
   position: relative;
 }
 :root {
   --white: #ffffff;
+  --bodt: #fcfcfc;
   --black: #000000;
   --teal: #9fd3c7;
   --red: rgb(197, 14, 14);
@@ -40,8 +41,14 @@ section {
   height: 100%;
 }
 .navbar {
-  background-color: black !important;
+  /*background-color: black !important;*/
   z-index: 20;
+}
+.none {
+  background: none !important;
+}
+.nav-black {
+  background-color: #0f0f0f !important;
 }
 /*.nav-link {
   color: #03717d !important;
@@ -71,7 +78,7 @@ section {
   height: calc(var(--vh, 1vh) * 100);
 }
 .navy {
-  background-color: #0a192f;
+  background-color: var(--bodt);
 }
 .d {
   background-color: #194484;
@@ -89,14 +96,29 @@ section {
 
 @media (min-width: 1200px) {
   .bg-parallax {
-    background-image: url(../images/bg.jpg);
+    background-image: url(../images/astratto-splash-colorato-sfondo-3d-sfondo-ai-generativo.jpg);
     background-color: black;
+    background-attachment: fixed !important;
+  }
+  .bg-overlay::before {
+    content: "";
+    overflow: hidden;
+    display: inline-block;
+    min-height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+  }
+  .bg-overlay-dark::before {
+    background-color: rgba(0, 0, 0, 0.36);
+    overflow: hidden;
     background-attachment: fixed !important;
   }
 }
 
 .bg-parallax {
-  background-color: black !important;
+  background-color: rgb(242, 237, 237);
   background-attachment: fixed !important;
 }
 .bg-section {
@@ -106,22 +128,13 @@ section {
   z-index: 1;
   overflow: hidden;
 }
-.bg-overlay::before {
-  content: "";
-  overflow: hidden;
-  display: inline-block;
-  min-height: 100%;
-  left: 0;
-  top: 0;
-  position: absolute;
-  width: 100%;
-}
-.bg-overlay-dark::before {
-  background-color: rgba(0, 0, 0, 0.767);
-  overflow: hidden;
-  background-attachment: fixed !important;
+.bio {
+  display: inline;
 }
 
+.highlight {
+  color: var(--redA) !important;
+}
 #blurredDiv {
   position: fixed;
   top: 0;
@@ -136,24 +149,28 @@ section {
 
 @media (min-width: 1200px) {
   .hero {
-    color: var(--redA);
-    padding-top: 160px;
+    color: var(--white);
+    padding-top: 140px;
     font-size: 60px;
     padding-left: 70px;
     text-transform: uppercase;
+  }
+  .bio-cont {
+    padding-bottom: 80px;
+    padding-right: 70px !important;
   }
   .bio {
     color: var(--white);
 
     font-size: 40px;
-    padding-right: 70px;
+
     text-transform: uppercase;
   }
   .exp {
     background-color: var(--black) !important;
     border-color: var(--black) !important;
     color: var(--white) !important;
-    margin-bottom: 200px;
+    margin-bottom: 160px;
     font-size: 20px !important;
   }
   .exp:hover {
@@ -177,7 +194,7 @@ section {
   .hero {
     color: var(--redA);
     font-size: 30px;
-    padding-bottom: 4.5rem !important;
+    padding-bottom: 5.5rem !important;
     text-transform: uppercase;
   }
   .bio {
@@ -191,7 +208,7 @@ section {
     background-color: var(--black) !important;
     border-color: var(--black) !important;
     color: var(--white) !important;
-    margin-bottom: 6rem !important;
+    margin-bottom: 8rem !important;
     font-size: 15px !important;
   }
   .exp:hover {
