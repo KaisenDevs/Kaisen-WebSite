@@ -551,6 +551,7 @@ section.services {
     margin-top: -270px;
   }
 }
+/*BentoGrid*/
 .bg-col1 {
   background-color: black;
   background-image: url(../images/alexandru-acea-XEB8y0nRRP4-unsplash.jpg);
@@ -587,3 +588,4 @@ div.bento {
 div.bento:hover {
   transform: translateY(-5px);
 }
+/*BentoGrid*/

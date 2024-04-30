@@ -108,3 +108,10 @@ var observer = new IntersectionObserver(function (entries) {
 elementiDaRilevare.forEach(function (elemento) {
   observer.observe(elemento);
 });
+var larghezzaDivRiferimento = document.querySelector(".row3").offsetWidth;
+
+// Imposta la larghezza del div di destinazione con la stessa larghezza del div di riferimento
+document.querySelector(".row2").style.width =
+  larghezzaDivRiferimento - 30 + "px";
+/*document.querySelector(".row1").style.width =
+  arghezzaDivRiferimento - 30 + "px";*/
