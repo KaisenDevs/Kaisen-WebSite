@@ -52,6 +52,8 @@ $(window).scroll(function (e) {
 });
 function slideFullScreen() {
   var div = document.getElementById("fullScreenDiv");
+  var nav = document.getElementById("navbar");
+  nav.classList.add("hidden");
   if (div.classList.contains("end")) {
     div.classList.remove("end");
     div.classList.add("start");
@@ -63,6 +65,8 @@ function slideFullScreen() {
 
 function closeFullScreen() {
   var div = document.getElementById("fullScreenDiv");
+  var nav = document.getElementById("navbar");
+  nav.classList.remove("hidden");
   div.classList.remove("start");
   div.classList.add("end");
   div.classList.remove("right");

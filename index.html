@@ -146,8 +146,9 @@
         <div class="card text-center">
           
           <div class="card-body">
-            <h5 class="card-title">Resta in contatto con noi!</h5>
-            <p class="card-text">Grazie per il tuo interesse nel contattare KAISEN!
+            <h5 class="card-title">Resta in contatto</h5>
+            <a id="closeButton" onclick="closeFullScreen()" class="btn btn-danger close-mb me-3">X</a>
+            <p class="card-text card-text-mb">Grazie per il tuo interesse nel contattare KAISEN!
 
               Utilizza il modulo sottostante per inviarci un messaggio con le tue esigenze, domande o richieste di informazioni. Saremo lieti di assisterti e ti risponderemo nel più breve tempo possibile.
               
@@ -174,7 +175,7 @@
                 
                 <div class="mb-2">
                   <label for="exampleFormControlTextarea1" class="form-label">Descrizione</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Descrivi la soluzione che vorresti"></textarea>
                 </div>
                 
                 
@@ -182,7 +183,7 @@
                   <button type="submit" class="btn btn-primary">Sign in</button>
                 </div>
               </form>
-            <a id="closeButton" onclick="closeFullScreen()" class="btn btn-danger">Chiudi</a>
+            <a id="closeButton" onclick="closeFullScreen()" class="btn btn-danger close">Chiudi</a>
           </div>
          
         </div>

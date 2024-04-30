@@ -7,6 +7,9 @@ html {
 section {
   scroll-behavior: smooth;
 }
+.hidden {
+  display: none !important;
+}
 .rel {
   position: relative;
 }
@@ -187,6 +190,9 @@ section {
   .btn-contact {
     padding-bottom: 120px;
   }
+  .close-mb {
+    display: none !important;
+  }
 }
 
 @media (max-width: 600px) {
@@ -224,6 +230,17 @@ section {
   }
   .btn {
     border-radius: 0.975rem !important;
+  }
+  .close-mb {
+    right: 0;
+    position: absolute;
+    top: 10px;
+  }
+  .close {
+    display: none !important;
+  }
+  .card-text-mb {
+    display: none !important;
   }
 }
 
@@ -270,6 +287,9 @@ section {
   .btn {
     border-radius: 0.975rem !important;
   }
+  .close-mb {
+    display: none !important;
+  }
 }
 
 @media (max-width: 809px) and (min-width: 601px) {
@@ -314,6 +334,9 @@ section {
   }
   .btn {
     border-radius: 0.975rem !important;
+  }
+  .close-mb {
+    display: none !important;
   }
 }
 .right {
@@ -365,4 +388,7 @@ section {
   box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1) !important;
   border-radius: 2rem !important;
   border: 1px solid rgba(255, 255, 255, 0.125) !important;
+}
+.card-title {
+  display: inline !important;
 }
