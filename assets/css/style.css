@@ -107,7 +107,9 @@ section {
     background-image: url(../images/pawel-czerwinski-W10XfpqLu4Y-unsplash.jpg);
   }
 }
-
+.bg {
+  background-image: url(../images/eastman-childs-CEtIM994vaI-unsplash.jpg);
+}
 .bg-overlay::before {
   content: "";
   overflow: hidden;
@@ -313,4 +315,54 @@ section {
   .btn {
     border-radius: 0.975rem !important;
   }
+}
+.right {
+  right: 0 !important;
+}
+.start {
+  position: fixed;
+  bottom: 0; /* Nascondi il div sotto la finestra */
+  width: 100%;
+  right: -100%;
+  height: 100%;
+  background-color: #ccc; /* Colore di sfondo per il div */
+  transition: right 0.5s; /* Animazione del movimento */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.end {
+  position: fixed;
+  bottom: -100%; /* Nascondi il div sotto la finestra */
+  width: 100%;
+  height: 100%;
+  background-color: #ccc; /* Colore di sfondo per il div */
+  transition: bottom 0.5s; /* Animazione del movimento */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.test {
+  position: absolute;
+  color: #000000;
+}
+.orb-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+.card {
+  background: rgba(255, 255, 255, 0.375) !important;
+  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1) !important;
+  border-radius: 2rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.125) !important;
 }

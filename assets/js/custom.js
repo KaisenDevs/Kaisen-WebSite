@@ -50,3 +50,30 @@ $(window).scroll(function (e) {
   $(".bio").css("-webkit-filter", "blur(" + distanceScrolled / 40 + "px)");
   $(".exp").css("-webkit-filter", "blur(" + distanceScrolled / 25 + "px)");
 });
+function slideFullScreen() {
+  var div = document.getElementById("fullScreenDiv");
+  if (div.classList.contains("end")) {
+    div.classList.remove("end");
+    div.classList.add("start");
+    div.classList.add("right");
+  } else {
+    div.classList.add("right");
+  }
+}
+
+function closeFullScreen() {
+  var div = document.getElementById("fullScreenDiv");
+  div.classList.remove("start");
+  div.classList.add("end");
+  div.classList.remove("right");
+  change();
+}
+
+function change() {
+  var div = document.getElementById("fullScreenDiv");
+  setTimeout(function () {
+    // Codice da eseguire dopo 0.5 secondi
+    div.classList.remove("end");
+    div.classList.add("start");
+  }, 500); // 500 millisecondi equivalgono a 0.5 secondi
+}

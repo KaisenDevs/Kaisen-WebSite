@@ -108,7 +108,7 @@
               <h3 class="bio">
                 facile e veloce, </h3>
                 <h3 class="bio highlight">kaisen </h3>
-                <h3 class="bio">il tuo partner 
+                <h3 class="bio">il tuo partner <br />
                 per un miglioramento continuo e affidabile.</h3>
               </h3>
             </div>
@@ -129,13 +129,72 @@
     </section>
     <section
       id="aboutme"
-      class="aboutme fade-in-section is-visible full-vh text-center navy rel"
-      style="z-index: 1"
+      class="aboutme fade-in-section bg-section text-center bg-overlay bg-overlay-dark full-vh text-center navy rel bg"
+      style="z-index: 0"
     ></section>
     <section id="project" class="project full-vh d rel"></section>
 
     <section id="contact" class="contact full-vh e rel">
-      
+      <div id="fullScreenDiv" class="start">
+       <!-- Canvas -->
+<canvas class="orb-canvas"></canvas>
+<!-- Overlay -->
+<div class="container-fluid">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-auto col-auto col-lg-auto">
+        <div class="card text-center">
+          
+          <div class="card-body">
+            <h5 class="card-title">Resta in contatto con noi!</h5>
+            <p class="card-text">Grazie per il tuo interesse nel contattare KAISEN!
+
+              Utilizza il modulo sottostante per inviarci un messaggio con le tue esigenze, domande o richieste di informazioni. Saremo lieti di assisterti e ti risponderemo nel più breve tempo possibile.
+              
+              
+              
+              Grazie ancora per aver scelto KAISEN. Siamo impazienti di sentirti!</p>
+              <form class="row g-3">
+                <div class="col-lg-3 col-md-5">
+                  <label for="inputEmail4" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="esempio@esempio.com">
+                </div>
+                <div class="col-lg-3 col-md-4">
+                  <label for="inputEmail4" class="form-label">Nome</label>
+                  <input type="text" class="form-control" id="inputEmail4" placeholder="La tua azienda">
+                </div>
+                <div class="col-lg-2 col-md-3">
+                  <label for="inputPassword4" class="form-label">Telefono</label>
+                  <input type="text" class="form-control" id="inputPassword4" placeholder="1234567890">
+                </div>
+                <div class="col-lg-4 col-md-12">
+                  <label for="inputAddress" class="form-label">Oggetto</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Sito Web per la mia azienda.">
+                </div>
+                
+                <div class="mb-2">
+                  <label for="exampleFormControlTextarea1" class="form-label">Descrizione</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                
+                
+                <div class="col-12 mb-2">
+                  <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+              </form>
+            <a id="closeButton" onclick="closeFullScreen()" class="btn btn-danger">Chiudi</a>
+          </div>
+         
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+       
+      </div>
+  
+      <button onclick="slideFullScreen()">OPEN DIV FROM RIGHT</button>
     </section>
 
     <footer>
@@ -156,6 +215,7 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/0.6.1/progressbar.min.js"></script>
     <script src="./assets/js/custom.js"></script>
+    <script type="module" src="./assets/js/orb.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
