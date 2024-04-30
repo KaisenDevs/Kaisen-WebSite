@@ -263,7 +263,7 @@ section {
     display: none !important;
   }
   .hero-service {
-    color: var(--white);
+    color: var(--black);
 
     font-size: 40px !important;
 
@@ -468,16 +468,122 @@ h5.line::after {
   color: var(--white) !important;
 }
 .hero-service {
-  color: var(--white);
+  color: var(--black);
 
   font-size: 60px;
 
   text-transform: uppercase;
 }
 .bio-service {
-  color: var(--white);
+  color: var(--black);
 
   font-size: 15px;
 
   text-transform: uppercase;
+}
+section.services {
+  background-color: var(--bodt);
+}
+@import url("https://fonts.googleapis.com/css?family=Roboto:700");
+
+#container-flip {
+  color: #999;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: bold;
+  padding-top: 200px;
+  position: absolute;
+  width: 100%;
+  bottom: 45%;
+  display: block;
+}
+
+#flip {
+  height: 50px;
+  overflow: hidden;
+}
+
+#flip > div > div {
+  color: #fff;
+  padding: 0px 12px 4px;
+  height: 45px;
+  margin-bottom: 45px;
+  display: inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background: #42c58a;
+}
+#flip div:first-child div {
+  background: #4ec7f3;
+}
+#flip div:last-child div {
+  background: #dc143c;
+}
+
+@keyframes show {
+  0% {
+    margin-top: -270px;
+  }
+  5% {
+    margin-top: -180px;
+  }
+  33% {
+    margin-top: -180px;
+  }
+  38% {
+    margin-top: -90px;
+  }
+  66% {
+    margin-top: -90px;
+  }
+  71% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
+.bg-col1 {
+  background-color: black;
+  background-image: url(../images/alexandru-acea-XEB8y0nRRP4-unsplash.jpg);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.bg-col2 {
+  background-color: black;
+  background-image: url(../images/startae-team-7tXA8xwe4W4-unsplash.jpg);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.bg-col3 {
+  background-color: black;
+  background-image: url(../images/eftakher-alam-i1VQZsU86ok-unsplash.jpg);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.bg-col4 {
+  background-color: black;
+  background-image: url(../images/abillion-bMTl6uFMONg-unsplash.jpg);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.bg-col5 {
+  background-color: black;
+  background-image: url(../images/luis-villasmil-4V8uMZx8FYA-unsplash.jpg);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.bg-col6 {
+  background-color: black;
+  background-image: url(../images/campaign-creators-RSc6D7bO0fA-unsplash.jpg);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+div.bento {
+  transition: transform 250ms;
+}
+div.bento:hover {
+  transform: translateY(-5px);
 }
