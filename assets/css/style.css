@@ -397,10 +397,6 @@ section {
   box-sizing: border-box;
 }
 
-.test {
-  position: absolute;
-  color: #000000;
-}
 .orb-canvas {
   position: absolute;
   top: 0;
