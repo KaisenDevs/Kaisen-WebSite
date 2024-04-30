@@ -32,7 +32,7 @@ window.onscroll = () => {
     if (a.classList.contains(current)) {
       a.classList.add("active");
     }
-    if (current == "aboutme" || current == "project" || current == "contact") {
+    if (current == "aboutme" || current == "services" || current == "contact") {
       var nav = document.getElementById("navbar");
       nav.classList.add("nav-black");
     }
