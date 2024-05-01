@@ -115,8 +115,7 @@ gsap.registerPlugin(ScrollTrigger);
 /*------------------------------
 Init ScrollSmoother
 ------------------------------*/
-ScrollTrigger.normalizeScroll(true);
-ScrollTrigger.config({ ignoreMobileResize: true });
+ScrollTrigger.normalizeScroll(false);
 
 const tl = gsap.timeline({
   scrollTrigger: {
