@@ -108,3 +108,37 @@ var observer = new IntersectionObserver(function (entries) {
 elementiDaRilevare.forEach(function (elemento) {
   observer.observe(elemento);
 });
+/*------------------------------
+Register plugins
+------------------------------*/
+gsap.registerPlugin(ScrollTrigger);
+
+/*------------------------------
+Init ScrollSmoother
+------------------------------*/
+
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".accordions",
+    pin: true,
+    start: "top top",
+    end: "bottom top",
+    scrub: 1,
+    ease: "linear",
+  },
+});
+
+tl.to(".accordion .text", {
+  height: 0,
+  paddingBottom: 0,
+  opacity: 0,
+  stagger: 0.5,
+});
+tl.to(
+  ".accordion",
+  {
+    marginBottom: -15,
+    stagger: 0.5,
+  },
+  "<"
+);

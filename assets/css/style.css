@@ -42,6 +42,12 @@ section {
     hsl(var(--hue), 95%, 99%),
     hsl(var(--hue), 95%, 84%)
   );
+  --ligthpurp: #c3b2e7;
+  --yellowjo: #fedf6f;
+  --salmon: #f9a474;
+  --lightblue: #b8cedc;
+  --lightgrteen: #c9da8f;
+  --rose: #f682a5;
 }
 
 .fa-solid {
@@ -549,39 +555,128 @@ section.services {
 }
 /*BentoGrid*/
 .bg-col1 {
-  background-color: black;
-  background-image: url(../images/alexandru-acea-XEB8y0nRRP4-unsplash.jpg);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  background-color: var(--ligthpurp);
+  /*background-image: url(../images/alexandru-acea-XEB8y0nRRP4-unsplash.jpg);*/
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  height: 200px;
 }
 .bg-col2 {
-  background-color: black;
-  background-image: url(../images/startae-team-7tXA8xwe4W4-unsplash.jpg);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  background-color: var(--rose);
+  /*background-image: url(../images/startae-team-7tXA8xwe4W4-unsplash.jpg);*/
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  height: 200px;
 }
 .bg-col3 {
-  background-color: black;
-  background-image: url(../images/eftakher-alam-i1VQZsU86ok-unsplash.jpg);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  background-color: var(--lightgrteen);
+  /*background-image: url(../images/eftakher-alam-i1VQZsU86ok-unsplash.jpg);*/
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  height: 350px;
 }
 .bg-col4 {
-  background-color: black;
-  background-image: url(../images/abillion-bMTl6uFMONg-unsplash.jpg);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  background-color: var(--yellowjo);
+  /*background-image: url(../images/abillion-bMTl6uFMONg-unsplash.jpg);*/
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  height: 350px;
 }
 .bg-col5 {
-  background-color: black;
-  background-image: url(../images/luis-villasmil-4V8uMZx8FYA-unsplash.jpg);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  background-color: var(--salmon);
+  /*background-image: url(../images/luis-villasmil-4V8uMZx8FYA-unsplash.jpg);*/
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  height: 150px;
 }
 .bg-col6 {
-  background-color: black;
-  background-image: url(../images/campaign-creators-RSc6D7bO0fA-unsplash.jpg);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  background-color: var(--lightblue);
+  /*background-image: url(../images/campaign-creators-RSc6D7bO0fA-unsplash.jpg);*/
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  height: 150px;
 }
 div.bento {
   transition: transform 250ms;
+  border-radius: 20px;
 }
 div.bento:hover {
   transform: translateY(-5px);
 }
+@media (min-width: 768px) {
+  .offset-1-cs {
+    margin-left: 2%;
+  }
+}
+@media (max-width: 767px) {
+  .bento {
+    height: 400px !important;
+  }
+}
 /*BentoGrid*/
+body {
+  scroll-behavior: smooth;
+}
+
+.title {
+  font-size: max(2vw, 24px);
+  line-height: 1.1;
+  padding-bottom: 0.4em;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+  font-size: max(1vw, 15px);
+  line-height: 1.4;
+  overflow: hidden;
+  padding-bottom: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.accordions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20vh;
+}
+
+.accordion {
+  background: linear-gradient(
+    200deg,
+    rgb(29, 145, 252) 13.57%,
+    rgb(90, 54, 192) 98.38%
+  );
+  width: max(50vw, 280px);
+  padding: 25px 30px 10px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.3);
+
+  &:nth-child(2) {
+    background: linear-gradient(
+      200deg,
+      rgb(242, 136, 133) 13.57%,
+      rgb(233, 79, 102) 98.38%
+    );
+  }
+
+  &:nth-child(3) {
+    background: linear-gradient(
+      200deg,
+      rgb(101, 187, 118) 13.57%,
+      rgb(70, 111, 171) 98.38%
+    );
+  }
+
+  &:nth-child(4) {
+    background: linear-gradient(200deg, #c215d1 13.57%, #9813a1 98.38%);
+  }
+}
+
+.spacer {
+  height: 70vh;
+}
+
+@media (max-width: 480px) {
+  .accordion {
+    padding: 15px 20px 8px;
+  }
+  .title {
+    font-size: 20px;
+  }
+}
