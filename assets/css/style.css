@@ -609,7 +609,7 @@ div.bento:hover {
 }
 /*BentoGrid*/
 body {
-  scroll-behavior: smooth;
+  scroll-behavior: none;
 }
 
 .title {
@@ -669,7 +669,7 @@ body {
 }
 
 .spacer {
-  height: 70vh;
+  height: 0vh;
 }
 
 @media (max-width: 480px) {

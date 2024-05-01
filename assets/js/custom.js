@@ -92,15 +92,14 @@ var observer = new IntersectionObserver(function (entries) {
   // Loop attraverso le voci (entries)
   entries.forEach(function (entry) {
     // Se l'elemento è visibile
-
-    if (entry.isIntersecting) {
+    /*if (entry.isIntersecting) {
       entry.target.classList.remove("animate__fadeOutRight");
       entry.target.classList.add("animate__fadeInLeft");
       // Esegui azioni o animazioni qui
     } else {
       entry.target.classList.remove("animate__fadeInLeft");
       entry.target.classList.add("animate__fadeOutRight");
-    }
+    }*/
   });
 });
 
@@ -121,7 +120,7 @@ const tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".accordions",
     pin: true,
-    start: "top top",
+    start: "top 20% top",
     end: "bottom top",
     scrub: 1,
     ease: "linear",
