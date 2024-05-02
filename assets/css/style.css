@@ -570,6 +570,9 @@ section.services {
   }
 }
 /*BentoGrid*/
+section.services {
+  background-color: var(--bodt);
+}
 .bg-col1 {
   background-color: var(--ligthpurp);
   /*background-image: url(../images/alexandru-acea-XEB8y0nRRP4-unsplash.jpg);*/
