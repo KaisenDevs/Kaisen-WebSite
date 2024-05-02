@@ -34,13 +34,33 @@ window.onscroll = () => {
     }
     if (current == "aboutme" || current == "services" || current == "contact") {
       var nav = document.getElementById("navbar");
+      var navl = document.getElementsByClassName("nav-l");
+      var sign = document.getElementsByClassName("sign");
       nav.classList.add("nav-black");
+      for (let item of navl) {
+        item.classList.add("black-t");
+      }
+      for (let item of sign) {
+        item.classList.add("sign-h");
+        item.classList.remove("sign");
+      }
     }
     if (current == "home") {
       var nav = document.getElementById("navbar");
+      var navl = document.getElementsByClassName("nav-l");
+      var sign = document.getElementsByClassName("sign-h");
       nav.classList.remove("nav-black");
+      for (let item of navl) {
+        item.classList.remove("black-t");
+      }
+      for (let item of sign) {
+        item.classList.add("sign");
+        item.classList.remove("sign-h");
+      }
+      //navl.classList.add("white");
+
+      //navl.item(1).classList.add("white");
     }
-    console.log(current);
   });
 };
 $(window).scroll(function (e) {
@@ -142,3 +162,6 @@ tl.to(
   },
   "<"
 );
+/*------------------------------
+GSAP
+------------------------------*/

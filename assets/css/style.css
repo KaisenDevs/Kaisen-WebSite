@@ -26,8 +26,12 @@ section {
   --teal: #9fd3c7;
   --red: rgb(197, 14, 14);
   --redA: rgb(255, 0, 0);
-  --blue: #3264a1;
+  --blue: #184363;
   --ocean: #0956fc;
+  --brown: #582614;
+  --dark-green: #1c471f;
+  --creativity-dark: #52225e;
+  --joy-dark: #4a411e;
   --bg: rgb(0, 0, 0);
   --dark-color: hsl(var(--hue), 100%, 9%);
   --light-color: hsl(var(--hue), 95%, 98%);
@@ -36,6 +40,7 @@ section {
   --complimentary2: hsl(var(--hue-complimentary2), 95%, 50%);
 
   --font-family: "Poppins", system-ui;
+  --card-bio: Hellix, sans-serif;
 
   --bg-gradient: linear-gradient(
     to bottom,
@@ -49,7 +54,10 @@ section {
   --lightgrteen: #c9da8f;
   --rose: #f682a5;
 }
-
+.nav-l.black-t {
+  font-family: monaco, monospace !important;
+  color: var(--black) !important;
+}
 .fa-solid {
   color: var(--redA) !important;
   font-size: 28px;
@@ -77,7 +85,7 @@ section {
   background: none !important;
 }
 .nav-black {
-  background-color: #0f0f0f !important;
+  background-color: var(--bodt) !important;
 }
 /*.nav-link {
   color: #03717d !important;
@@ -89,10 +97,18 @@ section {
 .nav-link:hover .sign {
   color: var(--white) !important;
 }
+
+.nav-link:hover .sign-h {
+  color: var(--black) !important;
+}
 .nav-link p {
   display: inline !important;
 }
 .sign {
+  color: var(--redA) !important;
+  font-family: monaco, monospace !important;
+}
+.sign-h {
   color: var(--redA) !important;
   font-family: monaco, monospace !important;
 }
@@ -570,25 +586,25 @@ section.services {
   background-color: var(--lightgrteen);
   /*background-image: url(../images/eftakher-alam-i1VQZsU86ok-unsplash.jpg);*/
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  height: 350px;
+  height: 300px;
 }
 .bg-col4 {
   background-color: var(--yellowjo);
   /*background-image: url(../images/abillion-bMTl6uFMONg-unsplash.jpg);*/
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  height: 350px;
+  height: 300px;
 }
 .bg-col5 {
   background-color: var(--salmon);
   /*background-image: url(../images/luis-villasmil-4V8uMZx8FYA-unsplash.jpg);*/
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  height: 150px;
+  height: 200px;
 }
 .bg-col6 {
   background-color: var(--lightblue);
   /*background-image: url(../images/campaign-creators-RSc6D7bO0fA-unsplash.jpg);*/
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  height: 150px;
+  height: 200px;
 }
 div.bento {
   transition: transform 250ms;
@@ -607,7 +623,86 @@ div.bento:hover {
     height: 400px !important;
   }
 }
+.card-text {
+  font-family: var(--card-bio);
+}
+.card-text.seo-t {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  color: var(--blue) !important;
+}
+.card-text.supp-t {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--brown) !important;
+}
+.card-text.web-t {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  color: var(--dark-green) !important;
+}
+.card-text.bsns-t {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  color: var(--creativity-dark) !important;
+}
+.card-text.design-t {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  color: var(--creativity-dark) !important;
+}
+.card-text.mob-t {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  color: var(--joy-dark) !important;
+}
+.seo {
+  background-image: url(../images/Website-PNG-File-Download-Free.png);
+}
+.supp {
+  background-image: url(../images/support.png);
+}
+.web {
+  background-image: url(../images/PngItem_3705866.png);
+}
+.web2 {
+  background-image: url(../images/programming.png);
+}
+.bsns {
+  background-image: url(../images/digital-marketing-business-marketing-strategy-social-media-marketing-marketing-illustration-70b11f562cc50852e447879c9c593796.png);
+}
+.design {
+  background-image: url(../images/clipart1539282.png);
+}
+.mob {
+  background-image: url(../images/app-development1.png);
+}
+.card-title.seo-t {
+  color: var(--blue) !important;
+}
+.card-title.supp-t {
+  color: var(--brown) !important;
+}
+.card-title.web-t {
+  color: var(--dark-green) !important;
+}
+.card-title.bsns-t {
+  color: var(--creativity-dark) !important;
+}
+.card-title.design-t {
+  color: var(--creativity-dark) !important;
+}
+.card-title.mob-t {
+  color: var(--joy-dark) !important;
+}
 /*BentoGrid*/
+/*GSAP*/
 body {
   scroll-behavior: none;
 }
@@ -678,5 +773,55 @@ body {
   }
   .title {
     font-size: 20px;
+  }
+}
+/*GSAP*/
+
+.scrolling-wrap {
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  .comm {
+    display: flex;
+    font-size: 2rem;
+    animation: scroll 10s linear infinite;
+    cursor: pointer;
+    margin: 0;
+    div {
+      margin: 0;
+      &:before {
+        content: "•";
+        -webkit-text-stroke: 0px #000;
+        color: var(--black);
+        display: inline-block;
+        margin: 0 4rem;
+      }
+      &:nth-child(odd) {
+        color: var(--redA);
+      }
+      /*&:hover {
+        color: #ff0;
+        transition: 0.2s;
+      }*/
+    }
+  }
+  &:hover {
+    .comm {
+      /*animation-play-state: paused;*/
+    }
+  }
+}
+.s-first {
+  color: var(--black) !important;
+}
+.s-second {
+  color: var(--redA);
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
