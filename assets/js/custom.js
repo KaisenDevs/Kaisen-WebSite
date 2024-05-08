@@ -130,12 +130,12 @@ elementiDaRilevare.forEach(function (elemento) {
 /*------------------------------
 Register plugins
 ------------------------------*/
-gsap.registerPlugin(ScrollTrigger);
+//gsap.registerPlugin(ScrollTrigger);
 
 /*------------------------------
 Init ScrollSmoother
 ------------------------------*/
-ScrollTrigger.normalizeScroll(false);
+/*ScrollTrigger.normalizeScroll(false);
 
 const tl = gsap.timeline({
   scrollTrigger: {
@@ -161,7 +161,38 @@ tl.to(
     stagger: 0.5,
   },
   "<"
-);
+);*/
 /*------------------------------
 GSAP
 ------------------------------*/
+var test = document.getElementById("aboutme");
+
+document.onscroll = function () {
+  scrollTop = window.scrollY;
+
+  allSec = document.getElementsByTagName("section");
+
+  for (i = 0; i < allSec.length; i++) {
+    curSec = allSec[i];
+
+    // The code below makes the background color change when the 						scroll top passes the 2/3 of the previous div.
+
+    heightBefore = 0;
+    if (i > 0) {
+      heightBefore = allSec[i - 1].offsetHeight / 3;
+    }
+
+    if (scrollTop > curSec.offsetTop - heightBefore) {
+      allSec = document.getElementsByTagName("section");
+      console.log(allSec[2]);
+      color = curSec.getAttribute("data-color");
+      Sec1 = allSec[2];
+      Sec2 = allSec[3];
+      Sec3 = allSec[4];
+      Sec1.style.background = color;
+      Sec2.style.background = color;
+      Sec3.style.background = color;
+      //curSec.style.background = color;
+    }
+  }
+};
