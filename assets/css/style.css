@@ -7,11 +7,17 @@ html {
 section {
   scroll-behavior: smooth;
   background-color: var(--bodt);
-  -webkit-transition: background 1.5s;
-  -moz-transition: background 1.5s;
-  -ms-transition: background 1.5s;
-  -o-transition: background 1.5s;
-  transition: background 1.5s;
+  -webkit-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+  -ms-transition: background 0.5s;
+  -o-transition: background 0.5s;
+  transition: background 0.5s;
+}
+a {
+  text-decoration: none !important;
+}
+.sign-t {
+  color: var(--white) !important;
 }
 .hidden {
   display: none !important;
@@ -30,10 +36,11 @@ section {
   --bodt: #fcfcfc;
   --black: #000000;
   --teal: #9fd3c7;
-  --red: #eed9b8;
+  --red: #f4e6d0;
   --redA: rgb(255, 0, 0);
+  --redB: #000000;
   --blue: #184363;
-  --ocean: #64b4f6;
+  --ocean: #d0e5f7;
   --brown: #582614;
   --dark-green: #1c471f;
   --creativity-dark: #52225e;
@@ -508,71 +515,6 @@ h5.line::after {
 
 @import url("https://fonts.googleapis.com/css?family=Roboto:700");
 
-#container-flip {
-  color: #999;
-  text-transform: uppercase;
-  font-size: 36px;
-  font-weight: bold;
-  padding-top: 200px;
-  position: absolute;
-  width: 100%;
-  bottom: 45%;
-  display: block;
-}
-
-#flip {
-  height: 50px;
-  overflow: hidden;
-}
-
-#flip > div > div {
-  color: #fff;
-  padding: 0px 12px 4px;
-  height: 45px;
-  margin-bottom: 45px;
-  display: inline-block;
-}
-
-#flip div:first-child {
-  animation: show 5s linear infinite;
-}
-
-#flip div div {
-  background: #42c58a;
-}
-#flip div:first-child div {
-  background: #4ec7f3;
-}
-#flip div:last-child div {
-  background: #dc143c;
-}
-
-@keyframes show {
-  0% {
-    margin-top: -270px;
-  }
-  5% {
-    margin-top: -180px;
-  }
-  33% {
-    margin-top: -180px;
-  }
-  38% {
-    margin-top: -90px;
-  }
-  66% {
-    margin-top: -90px;
-  }
-  71% {
-    margin-top: 0px;
-  }
-  99.99% {
-    margin-top: 0px;
-  }
-  100% {
-    margin-top: -270px;
-  }
-}
 /*BentoGrid*/
 /*section.services {
   background-color: var(--bodt);
@@ -1013,3 +955,125 @@ body {
     transform: translateX(-100%);
   }
 }
+/*CONTACT*/
+div.bento-c {
+  border-radius: 20px;
+  background-color: var(--bodt);
+}
+#container-flip {
+  color: #999;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: bold;
+  width: 100%;
+  bottom: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#flip {
+  height: 50px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#flip > div > div {
+  color: #fff;
+  padding: 4px 12px 4px;
+  height: 35px;
+  margin-bottom: 42px;
+  display: inline-flex;
+  align-items: center;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background: #42c58a;
+}
+#flip div:first-child div {
+  background: #4ec7f3;
+}
+#flip div:last-child div {
+  background: #dc143c;
+}
+
+@keyframes show {
+  0% {
+    margin-top: -270px;
+  }
+  5% {
+    margin-top: -180px;
+  }
+  33% {
+    margin-top: -180px;
+  }
+  38% {
+    margin-top: -90px;
+  }
+  66% {
+    margin-top: -90px;
+  }
+  71% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
+.credit {
+  flex-direction: column;
+  align-items: center;
+}
+.k-credit {
+  color: var(--redA);
+  font-weight: 600;
+}
+.k-right {
+  color: var(--redB);
+}
+.ctn {
+  background-color: var(--black) !important;
+  border-color: var(--black) !important;
+  color: var(--white) !important;
+}
+.ctn:hover {
+  background-color: var(--redA) !important;
+  border-color: var(--redA) !important;
+  color: var(--white) !important;
+}
+.ctn-mod {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.ctn-t {
+  text-transform: uppercase;
+  color: var(--redA) !important;
+}
+.ctn-help {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.info {
+  display: inline;
+}
+.lk {
+  color: var(--redA);
+  cursor: pointer;
+}
+a.ctn-m {
+  color: var(--redA) !important;
+}
+/*CONTACT*/
