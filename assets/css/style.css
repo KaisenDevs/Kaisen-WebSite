@@ -6,6 +6,12 @@ html {
 }
 section {
   scroll-behavior: smooth;
+  background-color: var(--bodt);
+  -webkit-transition: background 1.5s;
+  -moz-transition: background 1.5s;
+  -ms-transition: background 1.5s;
+  -o-transition: background 1.5s;
+  transition: background 1.5s;
 }
 .hidden {
   display: none !important;
@@ -499,9 +505,7 @@ h5.line::after {
 
   text-transform: uppercase;
 }
-section.services {
-  background-color: var(--bodt);
-}
+
 @import url("https://fonts.googleapis.com/css?family=Roboto:700");
 
 #container-flip {
@@ -570,9 +574,9 @@ section.services {
   }
 }
 /*BentoGrid*/
-section.services {
+/*section.services {
   background-color: var(--bodt);
-}
+}*/
 .bg-col1 {
   background-color: var(--ligthpurp);
   /*background-image: url(../images/alexandru-acea-XEB8y0nRRP4-unsplash.jpg);*/
