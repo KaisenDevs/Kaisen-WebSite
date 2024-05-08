@@ -101,25 +101,22 @@ function change() {
     div.classList.add("start");
   }, 500); // 500 millisecondi equivalgono a 0.5 secondi
 }
-var larghezzaSchermo = window.innerWidth;
-if (larghezzaSchermo > 600) {
-  var elementiDaRilevare = document.querySelectorAll(".fadein-l-row");
-} else {
-  var elementiDaRilevare = document.querySelectorAll(".fadein-l");
-}
+
+var elementiDaRilevare = document.querySelectorAll(".fadein-l-row");
+
 // Crea un nuovo oggetto Intersection Observer con una funzione di callback
 var observer = new IntersectionObserver(function (entries) {
   // Loop attraverso le voci (entries)
   entries.forEach(function (entry) {
     // Se l'elemento è visibile
-    /*if (entry.isIntersecting) {
-      entry.target.classList.remove("animate__fadeOutRight");
+    if (entry.isIntersecting) {
+      //entry.target.classList.remove("animate__fadeOutRight");
       entry.target.classList.add("animate__fadeInLeft");
       // Esegui azioni o animazioni qui
     } else {
       entry.target.classList.remove("animate__fadeInLeft");
-      entry.target.classList.add("animate__fadeOutRight");
-    }*/
+      //entry.target.classList.add("animate__fadeOutRight");
+    }
   });
 });
 
@@ -184,7 +181,7 @@ document.onscroll = function () {
 
     if (scrollTop > curSec.offsetTop - heightBefore) {
       allSec = document.getElementsByTagName("section");
-      console.log(allSec[2]);
+
       color = curSec.getAttribute("data-color");
       Sec1 = allSec[2];
       Sec2 = allSec[3];
