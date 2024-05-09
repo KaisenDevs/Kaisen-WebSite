@@ -125,52 +125,10 @@ var observer = new IntersectionObserver(function (entries) {
 elementiDaRilevare.forEach(function (elemento) {
   observer.observe(elemento);
 });
-let scrollCounter = 0;
-const target = document.getElementById("contact");
 
-const observer2 = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      console.log("L'elemento è entrato nello schermo!");
-    }
-  });
-});
-observer2.observe(target);
 /*------------------------------
 Register plugins
 ------------------------------*/
-//gsap.registerPlugin(ScrollTrigger);
-
-/*------------------------------
-Init ScrollSmoother
-------------------------------*/
-/*ScrollTrigger.normalizeScroll(false);
-
-const tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".accordions",
-    pin: true,
-    start: "top 20% top",
-    end: "bottom top",
-    scrub: 1,
-    ease: "linear",
-  },
-});
-
-tl.to(".accordion .text", {
-  height: 0,
-  paddingBottom: 0,
-  opacity: 0,
-  stagger: 0.5,
-});
-tl.to(
-  ".accordion",
-  {
-    marginBottom: -15,
-    stagger: 0.5,
-  },
-  "<"
-);*/
 
 console.clear();
 gsap.registerPlugin(ScrollTrigger);
