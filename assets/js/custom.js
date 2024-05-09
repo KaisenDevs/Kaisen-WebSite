@@ -69,6 +69,7 @@ $(window).scroll(function (e) {
   $(".hero").css("-webkit-filter", "blur(" + distanceScrolled / 60 + "px)");
   $(".bio").css("-webkit-filter", "blur(" + distanceScrolled / 40 + "px)");
   $(".exp").css("-webkit-filter", "blur(" + distanceScrolled / 25 + "px)");
+  //$(".blurred-ctn").css("-webkit-filter", "blur(20px)");
 });
 function slideFullScreen() {
   var div = document.getElementById("fullScreenDiv");
@@ -124,6 +125,17 @@ var observer = new IntersectionObserver(function (entries) {
 elementiDaRilevare.forEach(function (elemento) {
   observer.observe(elemento);
 });
+let scrollCounter = 0;
+const target = document.getElementById("contact");
+
+const observer2 = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      console.log("L'elemento è entrato nello schermo!");
+    }
+  });
+});
+observer2.observe(target);
 /*------------------------------
 Register plugins
 ------------------------------*/
@@ -159,6 +171,20 @@ tl.to(
   },
   "<"
 );*/
+
+console.clear();
+gsap.registerPlugin(ScrollTrigger);
+gsap.set(".blurred-ctn", { filter: "blur(10px)" });
+gsap.to(".blurred-ctn", {
+  filter: "blur(0px)",
+  scrollTrigger: {
+    trigger: ".bento-c",
+    start: "top center",
+    end: "top 15% top",
+    scrub: true,
+    markers: true,
+  },
+});
 /*------------------------------
 GSAP
 ------------------------------*/
