@@ -129,19 +129,55 @@ elementiDaRilevare.forEach(function (elemento) {
 /*------------------------------
 Register plugins
 ------------------------------*/
-
-console.clear();
-gsap.registerPlugin(ScrollTrigger);
-gsap.set(".blurred-ctn", { filter: "blur(10px)" });
-gsap.to(".blurred-ctn", {
-  filter: "blur(0px)",
-  scrollTrigger: {
-    trigger: ".bento-c",
-    start: "top center",
-    end: "top 15% top",
-    scrub: true,
-    markers: true,
-  },
+let screenHeight = window.innerHeight;
+if (screenHeight <= 900) {
+  console.clear();
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.set(".blurred-ctn", { filter: "blur(10px)" });
+  gsap.to(".blurred-ctn", {
+    filter: "blur(0px)",
+    scrollTrigger: {
+      trigger: ".bento-c",
+      start: "top center",
+      end: "top 15% top",
+      scrub: true,
+      markers: true,
+    },
+  });
+} else if (screenHeight > 900 && screenHeight < 1051) {
+  console.log("sono ipad");
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.set(".blurred-ctn", { filter: "blur(10px)" });
+  gsap.to(".blurred-ctn", {
+    filter: "blur(0px)",
+    scrollTrigger: {
+      trigger: ".bento-c",
+      start: "top center",
+      end: "top 40% top",
+      scrub: true,
+      markers: true,
+    },
+  });
+} else {
+  console.log("sono pro");
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.set(".blurred-ctn", { filter: "blur(10px)" });
+  gsap.to(".blurred-ctn", {
+    filter: "blur(0px)",
+    scrollTrigger: {
+      trigger: ".bento-tr",
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+      markers: true,
+    },
+  });
+}
+gsap.to("#animate-anything-css", {
+  duration: 1,
+  ease: "none",
+  repeat: -1,
+  rotation: 360,
 });
 /*------------------------------
 GSAP
@@ -177,3 +213,16 @@ document.onscroll = function () {
     }
   }
 };
+let tl2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".testa",
+    start: "60% center",
+    end: "bottom center",
+    scrub: true,
+    markers: true,
+  },
+});
+
+tl2.to(".animated-el", {
+  x: 1200,
+});

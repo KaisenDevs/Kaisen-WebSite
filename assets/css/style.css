@@ -1136,3 +1136,7 @@ a.ctn-m {
   color: var(--redA) !important;
 }
 /*CONTACT*/
+.animated-el {
+  position: relative;
+  left: -1200px;
+}
