@@ -1,4 +1,4 @@
-// When the user scrolls the page
+// When the user scrolls the page 1
 window.onscroll = function () {};
 
 $(function () {
