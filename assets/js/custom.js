@@ -1,9 +1,9 @@
-// When the user scrolls the page
+// When the user scrolls the page b
 window.onscroll = function () {};
 
 $(function () {
   $(document).scroll(function () {
-    var $nav = $(".fixed-top");
+    const $nav = $(".fixed-top");
     //$nav.toggleClass("bg-light", $(this).scrollTop() > 20);
   });
 });
