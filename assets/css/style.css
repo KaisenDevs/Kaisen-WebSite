@@ -5,7 +5,7 @@ html {
   margin: 0;
 }
 section {
-  scroll-behavior: smooth;
+  /*scroll-behavior: smooth;*/
   background-color: var(--bodt);
   -webkit-transition: background 0.5s;
   -moz-transition: background 0.5s;
