@@ -223,10 +223,10 @@ let tl2 = gsap.timeline({
   },
 });
 
-/*tl2.to(".animated-el", {
+tl2.to(".animated-el", {
   x: 2500,
 });
-gsap.registerPlugin(MotionPathPlugin);
+/*gsap.registerPlugin(MotionPathPlugin);
 
 // The start and end positions in terms of the page scroll
 const offsetFromTop = innerHeight * 0.25;
