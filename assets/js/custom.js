@@ -213,7 +213,7 @@ document.onscroll = function () {
     }
   }
 };
-/*let tl2 = gsap.timeline({
+let tl2 = gsap.timeline({
   scrollTrigger: {
     trigger: ".testa",
     start: "60% center",
@@ -223,7 +223,7 @@ document.onscroll = function () {
   },
 });
 
-tl2.to(".animated-el", {
+/*tl2.to(".animated-el", {
   x: 2500,
 });
 gsap.registerPlugin(MotionPathPlugin);
