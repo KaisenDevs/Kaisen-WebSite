@@ -910,7 +910,7 @@ div.bento:hover {
 /*BentoGrid*/
 /*GSAP*/
 body {
-  scroll-behavior: none;
+  /*scroll-behavior: none;*/
 }
 
 .title {
