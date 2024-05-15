@@ -213,7 +213,7 @@ document.onscroll = function () {
     }
   }
 };
-let tl2 = gsap.timeline({
+/*let tl2 = gsap.timeline({
   scrollTrigger: {
     trigger: ".testa",
     start: "60% center",
@@ -265,4 +265,4 @@ function update() {
 
   // Let the scroll event fire again
   requestId = null;
-}
+}*/
