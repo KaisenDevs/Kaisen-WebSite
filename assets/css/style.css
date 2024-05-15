@@ -189,6 +189,9 @@ a {
 .hero-service {
   font-family: var(--framer-font-family-line) !important;
 }
+.hero-am {
+  font-family: var(--framer-font-family-line) !important;
+}
 
 .service-b {
   font-family: var(--framer-font-family-line) !important;
@@ -367,6 +370,13 @@ a {
     display: none !important;
   }
   .hero-service {
+    color: var(--black);
+
+    font-size: 40px !important;
+
+    text-transform: uppercase;
+  }
+  .hero-am {
     color: var(--black);
 
     font-size: 40px !important;
@@ -556,6 +566,13 @@ div.card-c:hover > div.card-body > a > h5 {
   color: var(--white) !important;
 }
 .hero-service {
+  color: var(--black);
+
+  font-size: 60px;
+
+  text-transform: uppercase;
+}
+.hero-am {
   color: var(--black);
 
   font-size: 60px;
@@ -1138,5 +1155,11 @@ a.ctn-m {
 /*CONTACT*/
 .animated-el {
   position: relative;
-  left: -1200px;
+  left: -2500px;
+}
+#rec {
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  background-color: #8894aa;
 }
