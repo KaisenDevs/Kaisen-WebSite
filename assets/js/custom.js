@@ -115,7 +115,7 @@ var observer = new IntersectionObserver(function (entries) {
       entry.target.classList.add("animate__fadeInLeft");
       // Esegui azioni o animazioni qui
     } else {
-      entry.target.classList.remove("animate__fadeInLeft");
+      //entry.target.classList.remove("animate__fadeInLeft");
       //entry.target.classList.add("animate__fadeOutRight");
     }
   });
@@ -224,5 +224,45 @@ let tl2 = gsap.timeline({
 });
 
 tl2.to(".animated-el", {
-  x: 1200,
+  x: 2500,
 });
+gsap.registerPlugin(MotionPathPlugin);
+
+// The start and end positions in terms of the page scroll
+const offsetFromTop = innerHeight * 0.25;
+const pathBB = document.querySelector("#path").getBoundingClientRect();
+const startY = pathBB.top - innerHeight + offsetFromTop;
+const finishDistance = startY + pathBB.height - offsetFromTop;
+
+// the animation to use
+var tween = gsap
+  .to("#rec", {
+    duration: 5,
+    paused: true,
+    ease: "none",
+    motionPath: {
+      path: "#path",
+      align: "#path",
+      autoRotate: true,
+      alignOrigin: [0.5, 0.5],
+    },
+  })
+  .pause(0.001);
+
+// Listen to the scroll event
+document.addEventListener("scroll", function () {
+  // Prevent the update from happening too often (throttle the scroll event)
+  if (!requestId) {
+    requestId = requestAnimationFrame(update);
+  }
+});
+
+update();
+
+function update() {
+  // Update our animation
+  tween.progress((scrollY - startY) / finishDistance);
+
+  // Let the scroll event fire again
+  requestId = null;
+}
