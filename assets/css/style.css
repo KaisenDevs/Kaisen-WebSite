@@ -725,9 +725,6 @@ div.bento:hover {
   }
 }
 @media (min-width: 501px) and (max-width: 600px) {
-  .blurred-ctn {
-    -webkit-filter: blur(0) !important;
-  }
   .bsns {
     width: 150px !important;
     height: 150px !important;
