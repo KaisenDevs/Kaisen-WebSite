@@ -226,7 +226,7 @@ a {
 
 @media (min-width: 1200px) {
   .bg-parallax {
-    background-image: url(../images/pawel-czerwinski-W10XfpqLu4Y-unsplash.jpg);
+    background-image: url(../images/pawel-czerwinski-W10XfpqLu4Y-unsplash.webp);
     background-color: black;
     background-attachment: fixed !important;
   }
@@ -234,11 +234,11 @@ a {
 @media (max-width: 600px) {
   .bg-parallax {
     background-color: black;
-    background-image: url(../images/pawel-czerwinski-W10XfpqLu4Y-unsplash.jpg);
+    background-image: url(../images/pawel-czerwinski-W10XfpqLu4Y-unsplash.webp);
   }
 }
 .bg {
-  background-image: url(../images/eastman-childs-CEtIM994vaI-unsplash.jpg);
+  background-image: url(../images/eastman-childs-CEtIM994vaI-unsplash.webp);
 }
 .bg-overlay::before {
   content: "";
@@ -388,7 +388,7 @@ a {
 @media (max-width: 1199px) and (min-width: 810px) {
   .bg-parallax {
     background-color: black;
-    background-image: url(../images/pawel-czerwinski-W10XfpqLu4Y-unsplash.jpg);
+    background-image: url(../images/pawel-czerwinski-W10XfpqLu4Y-unsplash.webp);
   }
   .row.row-mb {
     justify-content: center !important;
@@ -599,7 +599,7 @@ div.card-c:hover > div.card-body > a > h5 {
 }
 .bg-col2 {
   background-color: var(--rose);
-  /*background-image: url(../images/startae-team-7tXA8xwe4W4-unsplash.jpg);*/
+  /*background-image: url(../images/startae-team-7tXA8xwe4W4-unsplash.webp);*/
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   height: 200px;
 }
@@ -809,37 +809,37 @@ div.bento:hover {
   color: var(--joy-dark) !important;
 }
 .seo {
-  background-image: url(../images/Website-PNG-File-Download-Free.png);
+  background-image: url(../images/Website-PNG-File-Download-Free.webp);
   width: 200px;
   height: 200px;
 }
 .supp {
-  background-image: url(../images/support.png);
+  background-image: url(../images/support.webp);
   width: 100px;
   height: 100px;
 }
 .web {
-  background-image: url(../images/PngItem_3705866.png);
+  background-image: url(../images/PngItem_3705866.webp);
   width: 300px;
   height: 300px;
 }
 .web2 {
-  background-image: url(../images/programming.png);
+  background-image: url(../images/programming.webp);
   width: 100px;
   height: 100px;
 }
 .bsns {
-  background-image: url(../images/digital-marketing-business-marketing-strategy-social-media-marketing-marketing-illustration-70b11f562cc50852e447879c9c593796.png);
+  background-image: url(../images/digital-marketing-business-marketing-strategy-social-media-marketing-marketing-illustration-70b11f562cc50852e447879c9c593796.webp);
   width: 200px;
   height: 200px;
 }
 .design {
-  background-image: url(../images/clipart1539282.png);
+  background-image: url(../images/clipart1539282.webp);
   width: 100px;
   height: 100px;
 }
 .mob {
-  background-image: url(../images/app-development1.png);
+  background-image: url(../images/app-development1.webp);
   width: 256px;
   height: 256px;
 }
@@ -863,37 +863,37 @@ div.bento:hover {
 }
 @media ((min-width: 768px) and (max-width: 820px)) {
   .seo {
-    background-image: url(../images/Website-PNG-File-Download-Free.png);
+    background-image: url(../images/Website-PNG-File-Download-Free.webp);
     width: 140px;
     height: 140px;
   }
   .supp {
-    background-image: url(../images/support.png);
+    background-image: url(../images/support.webp);
     width: 90px;
     height: 90px;
   }
   .web {
-    background-image: url(../images/PngItem_3705866.png);
+    background-image: url(../images/PngItem_3705866.webp);
     width: 150px;
     height: 150px;
   }
   .web2 {
-    background-image: url(../images/programming.png);
+    background-image: url(../images/programming.webp);
     width: 60px;
     height: 60px;
   }
   .bsns {
-    background-image: url(../images/digital-marketing-business-marketing-strategy-social-media-marketing-marketing-illustration-70b11f562cc50852e447879c9c593796.png);
+    background-image: url(../images/digital-marketing-business-marketing-strategy-social-media-marketing-marketing-illustration-70b11f562cc50852e447879c9c593796.webp);
     width: 130px;
     height: 130px;
   }
   .design {
-    background-image: url(../images/clipart1539282.png);
+    background-image: url(../images/clipart1539282.webp);
     width: 90px;
     height: 90px;
   }
   .mob {
-    background-image: url(../images/app-development1.png);
+    background-image: url(../images/app-development1.webp);
     width: 140px;
     height: 140px;
   }
