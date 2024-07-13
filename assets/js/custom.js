@@ -144,7 +144,7 @@ if (screenHeight <= 900) {
       start: "top center",
       end: "top 15% top",
       scrub: true,
-      markers: true,
+      markers: false,
     },
   });
 } else if (screenHeight > 900 && screenHeight < 1051) {
@@ -159,7 +159,7 @@ if (screenHeight <= 900) {
       start: "top center",
       end: "top 40% top",
       scrub: true,
-      markers: true,
+      markers: false,
     },
   });
 } else if (screenHeight >= 1051) {
@@ -174,7 +174,7 @@ if (screenHeight <= 900) {
       start: "top center",
       end: "bottom center",
       scrub: true,
-      markers: true,
+      markers: false,
     },
   });
 }
@@ -224,7 +224,7 @@ let tl2 = gsap.timeline({
     start: "60% center",
     end: "bottom center",
     scrub: true,
-    markers: true,
+    markers: false,
   },
 });
 
