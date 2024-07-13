@@ -132,7 +132,8 @@ Register plugins
 ------------------------------*/
 let screenHeight = window.innerHeight;
 let screenWidth = window.innerWidth;
-if (screenHeight <= 900 && screenWidth >= 600) {
+if (screenHeight <= 900) {
+  //&& screenWidth >= 600
   console.clear();
   gsap.registerPlugin(ScrollTrigger);
   gsap.set(".blurred-ctn", { filter: "blur(10px)" });
@@ -146,7 +147,8 @@ if (screenHeight <= 900 && screenWidth >= 600) {
       markers: true,
     },
   });
-} else if (screenHeight > 900 && screenHeight < 1051 && screenWidth >= 600) {
+} else if (screenHeight > 900 && screenHeight < 1051) {
+  //&& screenWidth >= 600
   console.log("sono ipad");
   gsap.registerPlugin(ScrollTrigger);
   gsap.set(".blurred-ctn", { filter: "blur(10px)" });
@@ -160,7 +162,8 @@ if (screenHeight <= 900 && screenWidth >= 600) {
       markers: true,
     },
   });
-} else if (screenHeight >= 1051 && screenWidth >= 600) {
+} else if (screenHeight >= 1051) {
+  //&& screenWidth >= 600
   console.log("sono pro");
   gsap.registerPlugin(ScrollTrigger);
   gsap.set(".blurred-ctn", { filter: "blur(10px)" });
