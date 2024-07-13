@@ -1,5 +1,6 @@
 // When the user scrolls the page b
 window.onscroll = function () {};
+var info = document.getElementById("info-ctn");
 
 $(function () {
   $(document).scroll(function () {
@@ -130,7 +131,9 @@ elementiDaRilevare.forEach(function (elemento) {
 Register plugins
 ------------------------------*/
 let screenHeight = window.innerHeight;
+let screenWidth = window.innerWidth;
 if (screenHeight <= 900) {
+  //&& screenWidth >= 600
   console.clear();
   gsap.registerPlugin(ScrollTrigger);
   gsap.set(".blurred-ctn", { filter: "blur(10px)" });
@@ -141,10 +144,11 @@ if (screenHeight <= 900) {
       start: "top center",
       end: "top 15% top",
       scrub: true,
-      markers: true,
+      markers: false,
     },
   });
 } else if (screenHeight > 900 && screenHeight < 1051) {
+  //&& screenWidth >= 600
   console.log("sono ipad");
   gsap.registerPlugin(ScrollTrigger);
   gsap.set(".blurred-ctn", { filter: "blur(10px)" });
@@ -155,10 +159,11 @@ if (screenHeight <= 900) {
       start: "top center",
       end: "top 40% top",
       scrub: true,
-      markers: true,
+      markers: false,
     },
   });
-} else {
+} else if (screenHeight >= 1051) {
+  //&& screenWidth >= 600
   console.log("sono pro");
   gsap.registerPlugin(ScrollTrigger);
   gsap.set(".blurred-ctn", { filter: "blur(10px)" });
@@ -169,7 +174,7 @@ if (screenHeight <= 900) {
       start: "top center",
       end: "bottom center",
       scrub: true,
-      markers: true,
+      markers: false,
     },
   });
 }
@@ -219,7 +224,7 @@ let tl2 = gsap.timeline({
     start: "60% center",
     end: "bottom center",
     scrub: true,
-    markers: true,
+    markers: false,
   },
 });
 
