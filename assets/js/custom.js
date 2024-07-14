@@ -1,5 +1,6 @@
 // When the user scrolls the page b
-window.onscroll = function () {};
+window.onscroll = function () {
+};
 var info = document.getElementById("info-ctn");
 
 $(function () {
@@ -72,6 +73,7 @@ $(window).scroll(function (e) {
   $(".exp").css("-webkit-filter", "blur(" + distanceScrolled / 25 + "px)");
   //$(".blurred-ctn").css("-webkit-filter", "blur(20px)");
 });
+
 function slideFullScreen() {
   var div = document.getElementById("fullScreenDiv");
   var nav = document.getElementById("navbar");
@@ -136,7 +138,7 @@ if (screenHeight <= 900) {
   //&& screenWidth >= 600
   console.clear();
   gsap.registerPlugin(ScrollTrigger);
-  gsap.set(".blurred-ctn", { filter: "blur(10px)" });
+  gsap.set(".blurred-ctn", {filter: "blur(10px)"});
   gsap.to(".blurred-ctn", {
     filter: "blur(0px)",
     scrollTrigger: {
@@ -151,7 +153,7 @@ if (screenHeight <= 900) {
   //&& screenWidth >= 600
   console.log("sono ipad");
   gsap.registerPlugin(ScrollTrigger);
-  gsap.set(".blurred-ctn", { filter: "blur(10px)" });
+  gsap.set(".blurred-ctn", {filter: "blur(10px)"});
   gsap.to(".blurred-ctn", {
     filter: "blur(0px)",
     scrollTrigger: {
@@ -166,7 +168,7 @@ if (screenHeight <= 900) {
   //&& screenWidth >= 600
   console.log("sono pro");
   gsap.registerPlugin(ScrollTrigger);
-  gsap.set(".blurred-ctn", { filter: "blur(10px)" });
+  gsap.set(".blurred-ctn", {filter: "blur(10px)"});
   gsap.to(".blurred-ctn", {
     filter: "blur(0px)",
     scrollTrigger: {
@@ -271,3 +273,13 @@ function update() {
   // Let the scroll event fire again
   requestId = null;
 }*/
+
+document.addEventListener("DOMContentLoaded", function () {
+  const lazyBg = document.querySelector('.lazy-bg');
+  const img = new Image();
+  img.src = 'assets/images/home_wallpaper.webp';
+  img.onload = function () {
+    lazyBg.style.backgroundImage = 'url("assets/images/home_wallpaper.webp")';
+    lazyBg.classList.remove('lazy-bg');
+  };
+});

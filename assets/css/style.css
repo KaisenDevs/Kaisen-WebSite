@@ -241,7 +241,7 @@ a {
 
 @media (min-width: 1200px) {
   .bg-parallax {
-    background-image: url(../images/pawel-czerwinski-W10XfpqLu4Y-unsplash.webp);
+    background-image: url(../images/home_wallpaper.webp);
     background-color: black;
     background-attachment: fixed !important;
   }
@@ -249,7 +249,7 @@ a {
 @media (max-width: 600px) {
   .bg-parallax {
     background-color: black;
-    background-image: url(../images/pawel-czerwinski-W10XfpqLu4Y-unsplash.webp);
+    background-image: url(../images/home_wallpaper.webp);
   }
 }
 .bg {
@@ -428,7 +428,7 @@ a {
 @media (max-width: 1199px) and (min-width: 810px) {
   .bg-parallax {
     background-color: black;
-    background-image: url(../images/pawel-czerwinski-W10XfpqLu4Y-unsplash.webp);
+    background-image: url(../images/home_wallpaper.webp);
   }
   .row.row-mb {
     justify-content: center !important;
