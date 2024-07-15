@@ -1,6 +1,5 @@
 // When the user scrolls the page b
-window.onscroll = function () {
-};
+window.onscroll = function () {};
 var info = document.getElementById("info-ctn");
 
 $(function () {
@@ -134,51 +133,53 @@ Register plugins
 ------------------------------*/
 let screenHeight = window.innerHeight;
 let screenWidth = window.innerWidth;
-if (screenHeight <= 900) {
-  //&& screenWidth >= 600
-  console.clear();
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.set(".blurred-ctn", {filter: "blur(10px)"});
-  gsap.to(".blurred-ctn", {
-    filter: "blur(0px)",
-    scrollTrigger: {
-      trigger: ".bento-c",
-      start: "top center",
-      end: "top 15% top",
-      scrub: true,
-      markers: false,
-    },
-  });
-} else if (screenHeight > 900 && screenHeight < 1051) {
-  //&& screenWidth >= 600
-  console.log("sono ipad");
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.set(".blurred-ctn", {filter: "blur(10px)"});
-  gsap.to(".blurred-ctn", {
-    filter: "blur(0px)",
-    scrollTrigger: {
-      trigger: ".bento-c",
-      start: "top center",
-      end: "top 40% top",
-      scrub: true,
-      markers: false,
-    },
-  });
-} else if (screenHeight >= 1051) {
-  //&& screenWidth >= 600
-  console.log("sono pro");
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.set(".blurred-ctn", {filter: "blur(10px)"});
-  gsap.to(".blurred-ctn", {
-    filter: "blur(0px)",
-    scrollTrigger: {
-      trigger: ".bento-tr",
-      start: "top center",
-      end: "bottom center",
-      scrub: true,
-      markers: false,
-    },
-  });
+if (screenWidth >= 600) {
+  if (screenHeight <= 900) {
+    //&& screenWidth >= 600
+    console.clear();
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.set(".blurred-ctn", { filter: "blur(10px)" });
+    gsap.to(".blurred-ctn", {
+      filter: "blur(0px)",
+      scrollTrigger: {
+        trigger: ".bento-c",
+        start: "top center",
+        end: "top 15% top",
+        scrub: true,
+        markers: false,
+      },
+    });
+  } else if (screenHeight > 900 && screenHeight < 1051) {
+    //&& screenWidth >= 600
+    console.log("sono ipad");
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.set(".blurred-ctn", { filter: "blur(10px)" });
+    gsap.to(".blurred-ctn", {
+      filter: "blur(0px)",
+      scrollTrigger: {
+        trigger: ".bento-c",
+        start: "top center",
+        end: "top 40% top",
+        scrub: true,
+        markers: false,
+      },
+    });
+  } else if (screenHeight >= 1051) {
+    //&& screenWidth >= 600
+    console.log("sono pro");
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.set(".blurred-ctn", { filter: "blur(10px)" });
+    gsap.to(".blurred-ctn", {
+      filter: "blur(0px)",
+      scrollTrigger: {
+        trigger: ".bento-tr",
+        start: "top center",
+        end: "bottom center",
+        scrub: true,
+        markers: false,
+      },
+    });
+  }
 }
 gsap.to("#animate-anything-css", {
   duration: 1,
@@ -275,11 +276,54 @@ function update() {
 }*/
 
 document.addEventListener("DOMContentLoaded", function () {
-  const lazyBg = document.querySelector('.lazy-bg');
+  const lazyBg = document.querySelector(".lazy-bg");
   const img = new Image();
-  img.src = 'assets/images/home_wallpaper.webp';
+  img.src = "assets/images/home_wallpaper.webp";
   img.onload = function () {
     lazyBg.style.backgroundImage = 'url("assets/images/home_wallpaper.webp")';
-    lazyBg.classList.remove('lazy-bg');
+    lazyBg.classList.remove("lazy-bg");
   };
+});
+// scripts.js per Privacy banner
+document.addEventListener("DOMContentLoaded", function () {
+  var privacyBanner = document.getElementById("privacyBanner");
+  var acceptPrivacyButton = document.getElementById("acceptPrivacy");
+
+  var localStorageKey = "privacyAccepted";
+  var expiryTimeInSeconds = 30; // Cambia questo valore per impostare 30 secondi
+
+  function setWithExpiry(key, value, seconds) {
+    var now = new Date();
+    var expiryTime = now.getTime() + seconds * 1000; // Calcola la scadenza in millisecondi
+    var item = {
+      value: value,
+      expiry: expiryTime,
+    };
+    localStorage.setItem(key, JSON.stringify(item));
+  }
+
+  function getWithExpiry(key) {
+    var itemStr = localStorage.getItem(key);
+    if (!itemStr) {
+      return null;
+    }
+    var item = JSON.parse(itemStr);
+    var now = new Date();
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key);
+      return null;
+    }
+    return item.value;
+  }
+
+  // Controlla se la privacy è già stata accettata
+  if (!getWithExpiry(localStorageKey)) {
+    privacyBanner.style.display = "block";
+  }
+
+  // Gestisci il click sul pulsante "OK"
+  acceptPrivacyButton.addEventListener("click", function () {
+    setWithExpiry(localStorageKey, "true", expiryTimeInSeconds);
+    privacyBanner.style.display = "none";
+  });
 });
