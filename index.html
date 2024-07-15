@@ -574,7 +574,7 @@
                       tempo possibile. Grazie ancora per aver scelto KAISEN.
                       Siamo impazienti di sentirti!
                     </p>
-                    <form class="row g-3" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                    <form class="row g-3 needs-validation" novalidate name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
                       <div class="col-lg-3 col-md-5">
                         <label for="inputEmail4" class="form-label"
                           >Email</label
@@ -585,7 +585,11 @@
                           class="form-control"
                           id="inputEmail4"
                           placeholder="me@esempio.com"
+                          required
                         />
+                        <div class="invalid-feedback">
+                          Inserisci una email.
+                        </div>
                       </div>
                       <div class="col-lg-3 col-md-4">
                         <label for="inputName" class="form-label">Nome</label>
@@ -595,7 +599,11 @@
                           class="form-control"
                           id="inputName"
                           placeholder="La tua azienda"
+                          required
                         />
+                        <div class="invalid-feedback">
+                         Inserisci un nome.
+                        </div>
                       </div>
                       <div class="col-lg-2 col-md-3">
                         <label for="inputPassword4" class="form-label"
@@ -607,7 +615,11 @@
                           class="form-control"
                           id="inputPassword4"
                           placeholder="1234567890"
+                          required
                         />
+                        <div class="invalid-feedback">
+                          Inserisci telefono.
+                        </div>
                       </div>
                       <div class="col-lg-4 col-md-12">
                         <label for="inputAddress" class="form-label"
@@ -619,7 +631,11 @@
                           class="form-control"
                           id="inputAddress"
                           placeholder="Sito Web per la mia azienda."
+                          required
                         />
+                        <div class="invalid-feedback">
+                          Inserisci un oggetto.
+                        </div>
                       </div>
 
                       <div class="mb-2">
@@ -634,7 +650,11 @@
                           id="exampleFormControlTextarea1"
                           rows="3"
                           placeholder="Descrivi la soluzione che vorresti"
+                          required
                         ></textarea>
+                        <div class="invalid-feedback">
+                         Inserisci una descrizione.
+                        </div>
                       </div>
 
                       <div class="col-12 mb-2">

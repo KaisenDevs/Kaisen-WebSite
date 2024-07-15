@@ -1,3 +1,26 @@
+(() => {
+  "use strict";
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll(".needs-validation");
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach((form) => {
+    form.addEventListener(
+      "submit",
+      (event) => {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+
+        form.classList.add("was-validated");
+      },
+      false
+    );
+  });
+})();
+
 // When the user scrolls the page b
 window.onscroll = function () {};
 var info = document.getElementById("info-ctn");
@@ -23,7 +46,7 @@ window.onscroll = () => {
 
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
-    if (scrollY >= sectionTop - 80) {
+    if (scrollY >= sectionTop - 150) {
       current = section.getAttribute("id");
     }
   });
@@ -290,26 +313,28 @@ document.addEventListener("DOMContentLoaded", function () {
   var acceptPrivacyButton = document.getElementById("acceptPrivacy");
 
   var localStorageKey = "privacyAccepted";
-  var expiryTimeInSeconds = 30; // Cambia questo valore per impostare 30 secondi
+  var policyVersion = "1.0"; // Cambia questo valore quando aggiorni la policy
+  var expiryTimeInDays = 30;
 
-  function setWithExpiry(key, value, seconds) {
+  function setWithExpiry(key, value, version, days) {
     var now = new Date();
-    var expiryTime = now.getTime() + seconds * 1000; // Calcola la scadenza in millisecondi
+    var expiryTime = now.getTime() + days * 1000;
     var item = {
       value: value,
+      version: version,
       expiry: expiryTime,
     };
     localStorage.setItem(key, JSON.stringify(item));
   }
 
-  function getWithExpiry(key) {
+  function getWithExpiryAndVersion(key, version) {
     var itemStr = localStorage.getItem(key);
     if (!itemStr) {
       return null;
     }
     var item = JSON.parse(itemStr);
     var now = new Date();
-    if (now.getTime() > item.expiry) {
+    if (now.getTime() > item.expiry || item.version !== version) {
       localStorage.removeItem(key);
       return null;
     }
@@ -317,13 +342,25 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Controlla se la privacy è già stata accettata
-  if (!getWithExpiry(localStorageKey)) {
+  if (!getWithExpiryAndVersion(localStorageKey, policyVersion)) {
     privacyBanner.style.display = "block";
   }
 
   // Gestisci il click sul pulsante "OK"
   acceptPrivacyButton.addEventListener("click", function () {
-    setWithExpiry(localStorageKey, "true", expiryTimeInSeconds);
+    setWithExpiry(localStorageKey, "true", policyVersion, expiryTimeInDays);
     privacyBanner.style.display = "none";
   });
 });
+/*
+var expiryTimeInDays = 30; // Cambia questo valore per impostare un diverso lasso di tempo
+
+    function setWithExpiry(key, value, days) {
+        var now = new Date();
+        var expiryTime = now.getTime() + days * 24 * 60 * 60 * 1000;
+        var item = {
+            value: value,
+            expiry: expiryTime
+        };
+        localStorage.setItem(key, JSON.stringify(item));
+    }*/
