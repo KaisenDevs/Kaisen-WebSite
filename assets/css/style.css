@@ -1251,9 +1251,19 @@ a.ctn-m {
   --bs-accordion-active-bg: var(--white) !important;
   --bs-accordion-btn-focus-box-shadow: none !important;
   background: rgb(255, 255, 255) !important;
+  /*width: 100% !important;*/
 }
 .accordion-button:not(.collapsed)::after {
   background-image: var(--bs-accordion-btn-icon) !important;
+}
+.modal-dialog {
+  max-width: 800px !important;
+}
+.modal-body.plc {
+  display: flex !important;
+  width: 100% !important;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .modal-content {
   align-items: center;
