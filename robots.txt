@@ -3,9 +3,4 @@ Disallow: /admin/
 Disallow: /login/
 Disallow: /private/
 Allow: /assets/images/favicon/
-
-# Permettere la scansione della landing page
-Allow: /landing-page/
-
-# Sitemap
-Sitemap: https://www.kaisendev.com/sitemap.xml
+Allow: /
