@@ -318,7 +318,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function setWithExpiry(key, value, version, days) {
     var now = new Date();
-    var expiryTime = now.getTime() + days * 1000;
+    var expiryTime = now.getTime() + days * 24 * 60 * 60 * 1000;
     var item = {
       value: value,
       version: version,
