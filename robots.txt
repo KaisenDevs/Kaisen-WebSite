@@ -1,6 +1,11 @@
 User-agent: *
-Disallow: /private-directory/
-Disallow: /temp/
-Allow: /public-directory/
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
+Allow: /assets/images/favicon/
 
-Sitemap: https://www.example.com/sitemap.xml
+# Permettere la scansione della landing page
+Allow: /landing-page/
+
+# Sitemap
+Sitemap: https://www.kaisendev.com/sitemap.xml
