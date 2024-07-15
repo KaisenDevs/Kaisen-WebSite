@@ -319,6 +319,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function setWithExpiry(key, value, version, days) {
     var now = new Date();
     var expiryTime = now.getTime() + days * 24 * 60 * 60 * 1000;
+    console.log("Setting expiry time:", expiryTime); // Log del tempo di scadenza
     var item = {
       value: value,
       version: version,
@@ -334,6 +335,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     var item = JSON.parse(itemStr);
     var now = new Date();
+    console.log("Current time:", now.getTime(), "Item expiry:", item.expiry); // Log del tempo attuale e di scadenza
     if (now.getTime() > item.expiry || item.version !== version) {
       localStorage.removeItem(key);
       return null;
@@ -352,6 +354,7 @@ document.addEventListener("DOMContentLoaded", function () {
     privacyBanner.style.display = "none";
   });
 });
+
 /*
 var expiryTimeInDays = 30; // Cambia questo valore per impostare un diverso lasso di tempo
 
