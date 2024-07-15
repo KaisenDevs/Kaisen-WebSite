@@ -574,11 +574,18 @@
                       tempo possibile. Grazie ancora per aver scelto KAISEN.
                       Siamo impazienti di sentirti!
                     </p>
-                    <form class="row g-3 needs-validation" novalidate name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                    <form class="row g-3 needs-validation" novalidate name="contact" method="POST"
+                          netlify-honeypot="bot-field" data-netlify-recaptcha="true" data-netlify="true">
+                      <div id="honeypot" >
+                        <p class="hidden">
+                          <label>
+                            Don't fill this out if you are human: <input name="bot-field" />
+                          </label>
+                        </p>
+                      </div>
                       <div class="col-lg-3 col-md-5">
                         <label for="inputEmail4" class="form-label"
-                          >Email</label
-                        >
+                        >Email</label>
                         <input
                           type="email"
                           name="Email"
@@ -663,6 +670,7 @@
                           Invia
                         </button>
                       </div>
+                      <div data-netlify-recaptcha="true"></div>
                     </form>
                     <a
                       id="closeButton"
