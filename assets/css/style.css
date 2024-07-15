@@ -1250,11 +1250,15 @@ a.ctn-m {
 .accordion {
   --bs-accordion-active-bg: var(--white) !important;
   --bs-accordion-btn-focus-box-shadow: none !important;
+  background: rgb(255, 255, 255) !important;
 }
 .accordion-button:not(.collapsed)::after {
   background-image: var(--bs-accordion-btn-icon) !important;
 }
 .modal-content {
   align-items: center;
+}
+.policy-low {
+  font-size: 12px;
 }
 /*Privacy banner*/
