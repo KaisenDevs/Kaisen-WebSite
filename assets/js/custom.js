@@ -174,7 +174,6 @@ if (screenWidth >= 600) {
     });
   } else if (screenHeight > 900 && screenHeight < 1051) {
     //&& screenWidth >= 600
-    console.log("sono ipad");
     gsap.registerPlugin(ScrollTrigger);
     gsap.set(".blurred-ctn", { filter: "blur(10px)" });
     gsap.to(".blurred-ctn", {
@@ -189,7 +188,6 @@ if (screenWidth >= 600) {
     });
   } else if (screenHeight >= 1051) {
     //&& screenWidth >= 600
-    console.log("sono pro");
     gsap.registerPlugin(ScrollTrigger);
     gsap.set(".blurred-ctn", { filter: "blur(10px)" });
     gsap.to(".blurred-ctn", {
@@ -319,7 +317,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function setWithExpiry(key, value, version, days) {
     var now = new Date();
     var expiryTime = now.getTime() + days * 24 * 60 * 60 * 1000;
-    console.log("Setting expiry time:", expiryTime); // Log del tempo di scadenza
     var item = {
       value: value,
       version: version,
@@ -335,7 +332,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     var item = JSON.parse(itemStr);
     var now = new Date();
-    console.log("Current time:", now.getTime(), "Item expiry:", item.expiry); // Log del tempo attuale e di scadenza
     if (now.getTime() > item.expiry || item.version !== version) {
       localStorage.removeItem(key);
       return null;
