@@ -291,7 +291,7 @@ a {
   position: relative;
   height: 150px !important;
   background-color: black;
-  background-image: url(../images/3d-render-abstract-particle-design-space-nebula-background.jpg);
+  background-image: url(../images/banner.webp);
 }
 .banner::after {
   content: "";
