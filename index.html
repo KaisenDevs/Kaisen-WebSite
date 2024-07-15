@@ -572,7 +572,7 @@
                       tempo possibile. Grazie ancora per aver scelto KAISEN.
                       Siamo impazienti di sentirti!
                     </p>
-                    <form class="row g-3" data-netlify="true">
+                    <form class="row g-3" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
                       <div class="col-lg-3 col-md-5">
                         <label for="inputEmail4" class="form-label"
                           >Email</label
@@ -586,12 +586,12 @@
                         />
                       </div>
                       <div class="col-lg-3 col-md-4">
-                        <label for="inputEmail4" class="form-label">Nome</label>
+                        <label for="inputName" class="form-label">Nome</label>
                         <input
                           type="text"
                           name="Cliente"
                           class="form-control"
-                          id="inputEmail4"
+                          id="inputName"
                           placeholder="La tua azienda"
                         />
                       </div>
