@@ -1,365 +1,211 @@
 (() => {
   "use strict";
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll(".needs-validation");
-
-  // Loop over them and prevent submission
-  Array.from(forms).forEach((form) => {
-    form.addEventListener(
+  const e = document.querySelectorAll(".needs-validation");
+  Array.from(e).forEach((e) => {
+    e.addEventListener(
       "submit",
-      (event) => {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-
-        form.classList.add("was-validated");
+      (t) => {
+        e.checkValidity() || (t.preventDefault(), t.stopPropagation()),
+          e.classList.add("was-validated");
       },
-      false
+      !1
     );
   });
-})();
-
-// When the user scrolls the page b
-window.onscroll = function () {};
+})(),
+  (window.onscroll = function () {});
 var info = document.getElementById("info-ctn");
-
 $(function () {
   $(document).scroll(function () {
-    const $nav = $(".fixed-top");
-    //$nav.toggleClass("bg-light", $(this).scrollTop() > 20);
+    $(".fixed-top");
   });
-});
-// We listen to the resize event
-window.addEventListener("resize", () => {
-  // We execute the same script as before
-
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty("--vh", `${vh}px`);
-});
-
-const sections = document.querySelectorAll("section");
-const navLi = document.querySelectorAll("ul#navLink li a");
-window.onscroll = () => {
-  var current = "";
-
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    if (scrollY >= sectionTop - 150) {
-      current = section.getAttribute("id");
-    }
+}),
+  window.addEventListener("resize", () => {
+    let e = 0.01 * window.innerHeight;
+    document.documentElement.style.setProperty("--vh", `${e}px`);
   });
-
-  navLi.forEach((a) => {
-    a.classList.remove("active");
-    if (a.classList.contains(current)) {
-      a.classList.add("active");
-    }
-    if (current == "aboutme" || current == "services" || current == "contact") {
-      var nav = document.getElementById("navbar");
-      var navl = document.getElementsByClassName("nav-l");
-      var sign = document.getElementsByClassName("sign");
-      nav.classList.add("nav-black");
-      for (let item of navl) {
-        item.classList.add("black-t");
-      }
-      for (let item of sign) {
-        item.classList.add("sign-h");
-        item.classList.remove("sign");
-      }
-    }
-    if (current == "home") {
-      var nav = document.getElementById("navbar");
-      var navl = document.getElementsByClassName("nav-l");
-      var sign = document.getElementsByClassName("sign-h");
-      nav.classList.remove("nav-black");
-      for (let item of navl) {
-        item.classList.remove("black-t");
-      }
-      for (let item of sign) {
-        item.classList.add("sign");
-        item.classList.remove("sign-h");
-      }
-      //navl.classList.add("white");
-
-      //navl.item(1).classList.add("white");
-    }
-  });
-};
-$(window).scroll(function (e) {
-  var distanceScrolled = $(this).scrollTop();
-
-  $(".hero").css("-webkit-filter", "blur(" + distanceScrolled / 60 + "px)");
-  $(".bio").css("-webkit-filter", "blur(" + distanceScrolled / 40 + "px)");
-  $(".exp").css("-webkit-filter", "blur(" + distanceScrolled / 25 + "px)");
-  //$(".blurred-ctn").css("-webkit-filter", "blur(20px)");
-});
-
+const sections = document.querySelectorAll("section"),
+  navLi = document.querySelectorAll("ul#navLink li a");
 function slideFullScreen() {
-  var div = document.getElementById("fullScreenDiv");
-  var nav = document.getElementById("navbar");
-  nav.classList.add("hidden");
-  if (div.classList.contains("end")) {
-    div.classList.remove("end");
-    div.classList.add("start");
-    div.classList.add("right");
-  } else {
-    div.classList.add("right");
-  }
+  var e = document.getElementById("fullScreenDiv");
+  document.getElementById("navbar").classList.add("hidden"),
+    e.classList.contains("end")
+      ? (e.classList.remove("end"),
+        e.classList.add("start"),
+        e.classList.add("right"))
+      : e.classList.add("right");
 }
-
 function closeFullScreen() {
-  var div = document.getElementById("fullScreenDiv");
-  var nav = document.getElementById("navbar");
-  nav.classList.remove("hidden");
-  div.classList.remove("start");
-  div.classList.add("end");
-  div.classList.remove("right");
-  change();
+  var e = document.getElementById("fullScreenDiv");
+  document.getElementById("navbar").classList.remove("hidden"),
+    e.classList.remove("start"),
+    e.classList.add("end"),
+    e.classList.remove("right"),
+    change();
 }
-
 function change() {
-  var div = document.getElementById("fullScreenDiv");
+  var e = document.getElementById("fullScreenDiv");
   setTimeout(function () {
-    // Codice da eseguire dopo 0.5 secondi
-    div.classList.remove("end");
-    div.classList.add("start");
-  }, 500); // 500 millisecondi equivalgono a 0.5 secondi
+    e.classList.remove("end"), e.classList.add("start");
+  }, 500);
 }
-
-var elementiDaRilevare = document.querySelectorAll(".fadein-l-row");
-
-// Crea un nuovo oggetto Intersection Observer con una funzione di callback
-var observer = new IntersectionObserver(function (entries) {
-  // Loop attraverso le voci (entries)
-  entries.forEach(function (entry) {
-    // Se l'elemento è visibile
-    if (entry.isIntersecting) {
-      //entry.target.classList.remove("animate__fadeOutRight");
-      entry.target.classList.add("animate__fadeInLeft");
-      // Esegui azioni o animazioni qui
-    } else {
-      //entry.target.classList.remove("animate__fadeInLeft");
-      //entry.target.classList.add("animate__fadeOutRight");
-    }
+(window.onscroll = () => {
+  var e = "";
+  sections.forEach((t) => {
+    const r = t.offsetTop;
+    scrollY >= r - 150 && (e = t.getAttribute("id"));
+  }),
+    navLi.forEach((t) => {
+      if (
+        (t.classList.remove("active"),
+        t.classList.contains(e) && t.classList.add("active"),
+        "aboutme" == e || "services" == e || "contact" == e)
+      ) {
+        var r = document.getElementById("navbar"),
+          n = document.getElementsByClassName("nav-l"),
+          s = document.getElementsByClassName("sign");
+        r.classList.add("nav-black");
+        for (let e of n) e.classList.add("black-t");
+        for (let e of s) e.classList.add("sign-h"), e.classList.remove("sign");
+      }
+      if ("home" == e) {
+        (r = document.getElementById("navbar")),
+          (n = document.getElementsByClassName("nav-l")),
+          (s = document.getElementsByClassName("sign-h"));
+        r.classList.remove("nav-black");
+        for (let e of n) e.classList.remove("black-t");
+        for (let e of s) e.classList.add("sign"), e.classList.remove("sign-h");
+      }
+    });
+}),
+  $(window).scroll(function (e) {
+    var t = $(this).scrollTop();
+    $(".hero").css("-webkit-filter", "blur(" + t / 60 + "px)"),
+      $(".bio").css("-webkit-filter", "blur(" + t / 40 + "px)"),
+      $(".exp").css("-webkit-filter", "blur(" + t / 25 + "px)");
   });
-});
-
-// Aggiungi tutti gli elementi al monitoraggio dell'Observer
-elementiDaRilevare.forEach(function (elemento) {
-  observer.observe(elemento);
-});
-
-/*------------------------------
-Register plugins
-------------------------------*/
-let screenHeight = window.innerHeight;
-let screenWidth = window.innerWidth;
-if (screenWidth >= 600) {
-  if (screenHeight <= 900) {
-    //&& screenWidth >= 600
-    console.clear();
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.set(".blurred-ctn", { filter: "blur(10px)" });
-    gsap.to(".blurred-ctn", {
-      filter: "blur(0px)",
-      scrollTrigger: {
-        trigger: ".bento-c",
-        start: "top center",
-        end: "top 15% top",
-        scrub: true,
-        markers: false,
-      },
+var elementiDaRilevare = document.querySelectorAll(".fadein-l-row"),
+  observer = new IntersectionObserver(function (e) {
+    e.forEach(function (e) {
+      e.isIntersecting && e.target.classList.add("animate__fadeInLeft");
     });
-  } else if (screenHeight > 900 && screenHeight < 1051) {
-    //&& screenWidth >= 600
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.set(".blurred-ctn", { filter: "blur(10px)" });
-    gsap.to(".blurred-ctn", {
-      filter: "blur(0px)",
-      scrollTrigger: {
-        trigger: ".bento-c",
-        start: "top center",
-        end: "top 40% top",
-        scrub: true,
-        markers: false,
-      },
-    });
-  } else if (screenHeight >= 1051) {
-    //&& screenWidth >= 600
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.set(".blurred-ctn", { filter: "blur(10px)" });
-    gsap.to(".blurred-ctn", {
-      filter: "blur(0px)",
-      scrollTrigger: {
-        trigger: ".bento-tr",
-        start: "top center",
-        end: "bottom center",
-        scrub: true,
-        markers: false,
-      },
-    });
-  }
-}
-gsap.to("#animate-anything-css", {
-  duration: 1,
-  ease: "none",
-  repeat: -1,
-  rotation: 360,
+  });
+elementiDaRilevare.forEach(function (e) {
+  observer.observe(e);
 });
-/*------------------------------
-GSAP
-------------------------------*/
+let screenHeight = window.innerHeight,
+  screenWidth = window.innerWidth;
+screenWidth >= 600 &&
+  (screenHeight <= 900
+    ? (console.clear(),
+      gsap.registerPlugin(ScrollTrigger),
+      gsap.set(".blurred-ctn", { filter: "blur(10px)" }),
+      gsap.to(".blurred-ctn", {
+        filter: "blur(0px)",
+        scrollTrigger: {
+          trigger: ".bento-c",
+          start: "top center",
+          end: "top 15% top",
+          scrub: !0,
+          markers: !1,
+        },
+      }))
+    : screenHeight > 900 && screenHeight < 1051
+    ? (console.log("sono ipad"),
+      gsap.registerPlugin(ScrollTrigger),
+      gsap.set(".blurred-ctn", { filter: "blur(10px)" }),
+      gsap.to(".blurred-ctn", {
+        filter: "blur(0px)",
+        scrollTrigger: {
+          trigger: ".bento-c",
+          start: "top center",
+          end: "top 40% top",
+          scrub: !0,
+          markers: !1,
+        },
+      }))
+    : screenHeight >= 1051 &&
+      (console.log("sono pro"),
+      gsap.registerPlugin(ScrollTrigger),
+      gsap.set(".blurred-ctn", { filter: "blur(10px)" }),
+      gsap.to(".blurred-ctn", {
+        filter: "blur(0px)",
+        scrollTrigger: {
+          trigger: ".bento-tr",
+          start: "top center",
+          end: "bottom center",
+          scrub: !0,
+          markers: !1,
+        },
+      }))),
+  gsap.to("#animate-anything-css", {
+    duration: 1,
+    ease: "none",
+    repeat: -1,
+    rotation: 360,
+  });
 var test = document.getElementById("aboutme");
-
 document.onscroll = function () {
-  scrollTop = window.scrollY;
-
-  allSec = document.getElementsByTagName("section");
-
-  for (i = 0; i < allSec.length; i++) {
-    curSec = allSec[i];
-
-    // The code below makes the background color change when the 						scroll top passes the 2/3 of the previous div.
-
-    heightBefore = 0;
-    if (i > 0) {
-      heightBefore = allSec[i - 1].offsetHeight / 3;
-    }
-
-    if (scrollTop > curSec.offsetTop - heightBefore) {
-      allSec = document.getElementsByTagName("section");
-
-      color = curSec.getAttribute("data-color");
-      Sec1 = allSec[2];
-      Sec2 = allSec[3];
-      Sec3 = allSec[4];
-      Sec1.style.background = color;
-      Sec2.style.background = color;
-      Sec3.style.background = color;
-      //curSec.style.background = color;
-    }
-  }
+  for (
+    scrollTop = window.scrollY,
+      allSec = document.getElementsByTagName("section"),
+      i = 0;
+    i < allSec.length;
+    i++
+  )
+    (curSec = allSec[i]),
+      (heightBefore = 0),
+      i > 0 && (heightBefore = allSec[i - 1].offsetHeight / 3),
+      scrollTop > curSec.offsetTop - heightBefore &&
+        ((allSec = document.getElementsByTagName("section")),
+        (color = curSec.getAttribute("data-color")),
+        (Sec1 = allSec[2]),
+        (Sec2 = allSec[3]),
+        (Sec3 = allSec[4]),
+        (Sec1.style.background = color),
+        (Sec2.style.background = color),
+        (Sec3.style.background = color));
 };
 let tl2 = gsap.timeline({
   scrollTrigger: {
     trigger: ".testa",
     start: "60% center",
     end: "bottom center",
-    scrub: true,
-    markers: false,
+    scrub: !0,
+    markers: !1,
   },
 });
-
-tl2.to(".animated-el", {
-  x: 2500,
-});
-/*gsap.registerPlugin(MotionPathPlugin);
-
-// The start and end positions in terms of the page scroll
-const offsetFromTop = innerHeight * 0.25;
-const pathBB = document.querySelector("#path").getBoundingClientRect();
-const startY = pathBB.top - innerHeight + offsetFromTop;
-const finishDistance = startY + pathBB.height - offsetFromTop;
-
-// the animation to use
-var tween = gsap
-  .to("#rec", {
-    duration: 5,
-    paused: true,
-    ease: "none",
-    motionPath: {
-      path: "#path",
-      align: "#path",
-      autoRotate: true,
-      alignOrigin: [0.5, 0.5],
-    },
-  })
-  .pause(0.001);
-
-// Listen to the scroll event
-document.addEventListener("scroll", function () {
-  // Prevent the update from happening too often (throttle the scroll event)
-  if (!requestId) {
-    requestId = requestAnimationFrame(update);
-  }
-});
-
-update();
-
-function update() {
-  // Update our animation
-  tween.progress((scrollY - startY) / finishDistance);
-
-  // Let the scroll event fire again
-  requestId = null;
-}*/
-
-document.addEventListener("DOMContentLoaded", function () {
-  const lazyBg = document.querySelector(".lazy-bg");
-  const img = new Image();
-  img.src = "assets/images/home_wallpaper.webp";
-  img.onload = function () {
-    lazyBg.style.backgroundImage = 'url("assets/images/home_wallpaper.webp")';
-    lazyBg.classList.remove("lazy-bg");
-  };
-});
-// scripts.js per Privacy banner
-document.addEventListener("DOMContentLoaded", function () {
-  var privacyBanner = document.getElementById("privacyBanner");
-  var acceptPrivacyButton = document.getElementById("acceptPrivacy");
-
-  var localStorageKey = "privacyAccepted";
-  var policyVersion = "1.0"; // Cambia questo valore quando aggiorni la policy
-  var expiryTimeInDays = 30;
-
-  function setWithExpiry(key, value, version, days) {
-    var now = new Date();
-    var expiryTime = now.getTime() + days * 24 * 60 * 60 * 1000;
-    var item = {
-      value: value,
-      version: version,
-      expiry: expiryTime,
-    };
-    localStorage.setItem(key, JSON.stringify(item));
-  }
-
-  function getWithExpiryAndVersion(key, version) {
-    var itemStr = localStorage.getItem(key);
-    if (!itemStr) {
-      return null;
-    }
-    var item = JSON.parse(itemStr);
-    var now = new Date();
-    if (now.getTime() > item.expiry || item.version !== version) {
-      localStorage.removeItem(key);
-      return null;
-    }
-    return item.value;
-  }
-
-  // Controlla se la privacy è già stata accettata
-  if (!getWithExpiryAndVersion(localStorageKey, policyVersion)) {
-    privacyBanner.style.display = "block";
-  }
-
-  // Gestisci il click sul pulsante "OK"
-  acceptPrivacyButton.addEventListener("click", function () {
-    setWithExpiry(localStorageKey, "true", policyVersion, expiryTimeInDays);
-    privacyBanner.style.display = "none";
+tl2.to(".animated-el", { x: 2500 }),
+  document.addEventListener("DOMContentLoaded", function () {
+    const e = document.querySelector(".lazy-bg"),
+      t = new Image();
+    (t.src = "assets/images/home_wallpaper.webp"),
+      (t.onload = function () {
+        (e.style.backgroundImage = 'url("assets/images/home_wallpaper.webp")'),
+          e.classList.remove("lazy-bg");
+      });
+  }),
+  document.addEventListener("DOMContentLoaded", function () {
+    var e = document.getElementById("privacyBanner"),
+      t = document.getElementById("acceptPrivacy"),
+      r = "privacyAccepted";
+    (function (e, t) {
+      var r = localStorage.getItem(e);
+      if (!r) return null;
+      var n = JSON.parse(r);
+      return new Date().getTime() > n.expiry || n.version !== t
+        ? (localStorage.removeItem(e), null)
+        : n.value;
+    })(r, "1.0") || (e.style.display = "block"),
+      t.addEventListener("click", function () {
+        var t, n, s;
+        (t = r),
+          (n = 30),
+          (s = {
+            value: "true",
+            version: "1.0",
+            expiry: new Date().getTime() + 24 * n * 60 * 60 * 1e3,
+          }),
+          localStorage.setItem(t, JSON.stringify(s)),
+          (e.style.display = "none");
+      });
   });
-});
-
-/*
-var expiryTimeInDays = 30; // Cambia questo valore per impostare un diverso lasso di tempo
-
-    function setWithExpiry(key, value, days) {
-        var now = new Date();
-        var expiryTime = now.getTime() + days * 24 * 60 * 60 * 1000;
-        var item = {
-            value: value,
-            expiry: expiryTime
-        };
-        localStorage.setItem(key, JSON.stringify(item));
-    }*/
