@@ -52,7 +52,7 @@ function change() {
   var e = "";
   sections.forEach((t) => {
     const r = t.offsetTop;
-    scrollY >= r - 150 && (e = t.getAttribute("id"));
+    scrollY >= r - 480 && (e = t.getAttribute("id")); //150
   }),
     navLi.forEach((t) => {
       if (
